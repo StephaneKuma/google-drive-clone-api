@@ -1,0 +1,35 @@
+openapi: 3.0.3
+info:
+  title: 'Google Drive Clone API'
+  description: "Our API provides comprehensive functionality for managing files and folders in a cloud storage environment, akin to Google Drive. Built with Laravel, it offers robust endpoints for seamless integration with your front-end applications. With secure authentication mechanisms and efficient data handling, our API enables users to upload, download, organize, and share files effortlessly. Whether you're building a personal file repository or a collaborative workspace, our API empowers you to create a powerful cloud storage solution tailored to your needs."
+  version: 1.0.0
+servers:
+  -
+    url: 'https://google-drive-clone-api.wip'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
