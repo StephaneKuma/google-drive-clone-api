@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Repositories\Authentication;
 
 use Illuminate\Http\Request;

@@ -21,7 +21,7 @@ class AuthenticationRepository implements AuthenticationContract
      */
     public function register(FormRequest $request): User
     {
-        /** @var array<int, string> $validated */
+        /** @var array<string, string> $validated */
         $validated = $request->validated();
 
         /** @var \App\Models\User $user */

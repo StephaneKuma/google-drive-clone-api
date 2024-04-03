@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Repositories\Authentication;
 
 use Illuminate\Http\JsonResponse;
@@ -18,7 +20,7 @@ class ResetPasswordRepository implements ResetPasswordContract
      */
     public function reset(FormRequest $request): JsonResponse
     {
-        /** @var array<int, string> $validated */
+        /** @var array<string, string> $validated */
         $validated = $request->validated();
 
         $status = Password::reset($validated, function (User $user, string $password) {

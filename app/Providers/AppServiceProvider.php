@@ -33,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             \App\Services\Authentication\ForgotPasswordService::class,
             fn () => new \App\Services\Authentication\ForgotPasswordService(
-                new \App\Repositories\Authentication\ForgotPasswordRepository
+                new \App\Repositories\Authentication\ForgotPasswordRepository()
             )
         );
 
@@ -45,7 +45,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             \App\Services\Authentication\ResetPasswordService::class,
             fn () => new \App\Services\Authentication\ResetPasswordService(
-                new \App\Repositories\Authentication\ResetPasswordRepository
+                new \App\Repositories\Authentication\ResetPasswordRepository()
             )
         );
 
@@ -57,7 +57,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(
             \App\Services\Authentication\VerificationService::class,
             fn () => new \App\Services\Authentication\VerificationService(
-                new \App\Repositories\Authentication\VerificationRepository
+                new \App\Repositories\Authentication\VerificationRepository()
             )
         );
     }
