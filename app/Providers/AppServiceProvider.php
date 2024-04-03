@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Models\User;
+use Knuckles\Scribe\Scribe;
+use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
+use Knuckles\Camel\Extraction\ExtractedEndpointData;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -67,5 +71,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (class_exists(\Knuckles\Scribe\Scribe::class)) {
+            Scribe::beforeResponseCall(function (Request $request, ExtractedEndpointData $endpointData) {
+                $token = User::first()->api_token;
+                $request->headers->add(["Authorization" => "Bearer $token"]);
+            });
+        }
     }
 }

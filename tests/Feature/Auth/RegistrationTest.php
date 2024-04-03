@@ -2,14 +2,16 @@
 
 declare(strict_types=1);
 
-test('new users can register', function () {
-    $response = $this->post('/register', [
+use function Pest\Laravel\{postJson};
+
+test('can register a new user', function () {
+    $response = postJson('/api/v1/register', [
         'name' => 'Test User',
         'email' => 'test@example.com',
         'password' => 'password',
         'password_confirmation' => 'password',
     ]);
 
-    $this->assertAuthenticated();
-    $response->assertNoContent();
+    $response->assertCreated()
+        ->assertJsonStructure(['data', 'token']);
 });

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Google Drive Clone API",
-        "_postman_id": "c67eca4f-3eba-4b95-bedd-5f469dc4040e",
+        "_postman_id": "b1208c99-1696-4765-9c7d-c884bc8ed13e",
         "description": "Our API provides comprehensive functionality for managing files and folders in a cloud storage environment, akin to Google Drive. Built with Laravel, it offers robust endpoints for seamless integration with your front-end applications. With secure authentication mechanisms and efficient data handling, our API enables users to upload, download, organize, and share files effortlessly. Whether you're building a personal file repository or a collaborative workspace, our API empowers you to create a powerful cloud storage solution tailored to your needs.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -56,7 +56,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":47,\"name\":\"Rudy Reilly\",\"email\":\"kuvalis.jasmin@example.com\",\"created_at\":{\"datetime\":\"2024-04-03T17:14:30.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Wed, Apr 3, 2024 5:14 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
+                            "body": "{\"data\":{\"id\":2,\"name\":\"Charles Baumbach\",\"email\":\"ledner.samson@example.com\",\"created_at\":{\"datetime\":\"2024-04-03T21:56:51.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Wed, Apr 3, 2024 9:56 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
                             "name": ""
                         }
                     ]
@@ -98,8 +98,199 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":48,\"name\":\"Miss Shanie Feest II\",\"email\":\"alia99@example.org\",\"created_at\":{\"datetime\":\"2024-04-03T17:14:30.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Wed, Apr 3, 2024 5:14 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
+                            "body": "{\"data\":{\"id\":3,\"name\":\"Prof. Sharon Bailey\",\"email\":\"margarett88@example.org\",\"created_at\":{\"datetime\":\"2024-04-03T21:56:52.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Wed, Apr 3, 2024 9:56 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
                             "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Forgot Password",
+                    "description": "Send a reset link to the given user.",
+                    "item": [
+                        {
+                            "name": "Password reset link.",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/password\/email",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/password\/email"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept-Language",
+                                        "value": "en"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"email\":\"john.doe@example.com\"}"
+                                },
+                                "description": "Send a reset link to the given user."
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "{\n   \"message\": \"We have e-mailed your password reset link.\"\n}",
+                                    "name": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Reset Password",
+                    "description": "Reset the user password.",
+                    "item": [
+                        {
+                            "name": "Reset password.",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/password\/reset",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/password\/reset"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept-Language",
+                                        "value": "en"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"token\":\"delectus\",\"email\":\"leannon.benton@example.org\",\"password\":\"SV$v~#8`q,EOf%R?\",\"password_confirmation\":\"est\"}"
+                                },
+                                "description": "Reset the given user's password.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "{\n   \"message\": \"Your password has been reset.\"\n}",
+                                    "name": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Verify Email",
+                    "description": "Verify user email.",
+                    "item": [
+                        {
+                            "name": "Verify email",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/email\/verify\/:id\/:hash",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/email\/verify\/:id\/:hash",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "1",
+                                            "description": "The ID of the user."
+                                        },
+                                        {
+                                            "id": "hash",
+                                            "key": "hash",
+                                            "value": "56Z83cdafEvb1P4VheDga6k",
+                                            "description": "The hash of the user."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept-Language",
+                                        "value": "en"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Verify the email of the user.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "{\n   \"message\": \"Email successfully verified\"\n}",
+                                    "name": ""
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Resend email",
+                            "request": {
+                                "url": {
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/v1\/email\/resend",
+                                    "query": [],
+                                    "raw": "{{baseUrl}}\/api\/v1\/email\/resend"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Accept-Language",
+                                        "value": "en"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Resend the email verification notification.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "response": [
+                                {
+                                    "header": [],
+                                    "code": 200,
+                                    "body": "{\n   \"message\": \"Email verification link sent on your email id\"\n}",
+                                    "name": ""
+                                }
+                            ]
                         }
                     ]
                 },
@@ -151,7 +342,7 @@
                         "method": "GET",
                         "header": [
                             {
-                                "key": "Accept-Language:",
+                                "key": "Accept-Language",
                                 "value": "en"
                             },
                             {
@@ -170,7 +361,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":49,\"name\":\"Serenity Shanahan\",\"email\":\"kamille.schumm@example.net\",\"created_at\":{\"datetime\":\"2024-04-03T17:14:30.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Wed, Apr 3, 2024 5:14 PM\"}}}",
+                            "body": "{\"data\":{\"id\":4,\"name\":\"Prof. Eduardo Rippin Sr.\",\"email\":\"otis41@example.net\",\"created_at\":{\"datetime\":\"2024-04-03T21:56:52.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Wed, Apr 3, 2024 9:56 PM\"}}}",
                             "name": ""
                         }
                     ]

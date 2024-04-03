@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Authentication;
 
 use Illuminate\Http\Request;
@@ -59,7 +61,7 @@ class AuthenticationController extends Controller
      *
      * Get the currently authenticated user.
      *
-     * @header Accept-Language: en
+     * @header Accept-Language en
      *
      * @apiResource App\Http\Resources\UserResource
      * @apiResourceModel App\Models\User

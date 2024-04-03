@@ -1,13 +1,11 @@
 <?php
 
-declare(strict_types=1);
+namespace App\Http\Requests\Authentication\ResetPassword;
 
-namespace App\Http\Requests\Authentication;
-
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Foundation\Http\FormRequest;
 
-class RegistrationRequest extends FormRequest
+class ResetPasswordRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,8 +23,8 @@ class RegistrationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'token' => 'required',
+            'email' => 'required|email',
             'password' => ['required', 'string', Password::defaults(), 'confirmed'],
             'password_confirmation' => ['required', 'string'],
         ];
@@ -40,22 +38,22 @@ class RegistrationRequest extends FormRequest
     public function bodyParameters(): array
     {
         return [
-            'email' => [
-                'description' => 'User email.',
-                'example' => 'john.doe@example.com',
+            'token' => [
+                'description' => 'The reset password token.',
+                'exemple' => '1234569853235'
             ],
-            'name' => [
-                'description' => 'User name.',
-                'example' => 'John Doe',
+            'email' => [
+                'description' => 'The email address.',
+                'exemple' => 'john.doe@example.com'
             ],
             'password' => [
-                'description' => 'User password.',
-                'example' => 'password',
+                'description' => 'The new password.',
+                'exemple' => 'new password'
             ],
             'password_confirmation' => [
-                'description' => 'User password confirmation.',
-                'example' => 'password',
-            ],
+                'description' => 'The password confirmation.',
+                'exemple' => 'new password'
+            ]
         ];
     }
 }

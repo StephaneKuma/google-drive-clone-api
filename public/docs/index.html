@@ -83,6 +83,33 @@
                                                                                 <li class="tocify-item level-2" data-unique="authentication-GETapi-v1-user">
                                 <a href="#authentication-GETapi-v1-user">Current user</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-forgot-password">
+                                <a href="#authentication-forgot-password">Forgot Password</a>
+                            </li>
+                                                            <ul id="tocify-subheader-authentication-forgot-password" class="tocify-subheader">
+                                                                            <li class="tocify-item level-3" data-unique="authentication-POSTapi-v1-password-email">
+                                            <a href="#authentication-POSTapi-v1-password-email">Password reset link.</a>
+                                        </li>
+                                                                    </ul>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-reset-password">
+                                <a href="#authentication-reset-password">Reset Password</a>
+                            </li>
+                                                            <ul id="tocify-subheader-authentication-reset-password" class="tocify-subheader">
+                                                                            <li class="tocify-item level-3" data-unique="authentication-POSTapi-v1-password-reset">
+                                            <a href="#authentication-POSTapi-v1-password-reset">Reset password.</a>
+                                        </li>
+                                                                    </ul>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-verify-email">
+                                <a href="#authentication-verify-email">Verify Email</a>
+                            </li>
+                                                            <ul id="tocify-subheader-authentication-verify-email" class="tocify-subheader">
+                                                                            <li class="tocify-item level-3" data-unique="authentication-GETapi-v1-email-verify--id---hash-">
+                                            <a href="#authentication-GETapi-v1-email-verify--id---hash-">Verify email</a>
+                                        </li>
+                                                                            <li class="tocify-item level-3" data-unique="authentication-POSTapi-v1-email-resend">
+                                            <a href="#authentication-POSTapi-v1-email-resend">Resend email</a>
+                                        </li>
+                                                                    </ul>
                                                                         </ul>
                             </ul>
             </div>
@@ -111,7 +138,7 @@
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer your-token"</code></strong>.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -179,13 +206,13 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 47,
-        &quot;name&quot;: &quot;Rudy Reilly&quot;,
-        &quot;email&quot;: &quot;kuvalis.jasmin@example.com&quot;,
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;Charles Baumbach&quot;,
+        &quot;email&quot;: &quot;ledner.samson@example.com&quot;,
         &quot;created_at&quot;: {
-            &quot;datetime&quot;: &quot;2024-04-03T17:14:30.000000Z&quot;,
+            &quot;datetime&quot;: &quot;2024-04-03T21:56:51.000000Z&quot;,
             &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
-            &quot;human&quot;: &quot;Wed, Apr 3, 2024 5:14 PM&quot;
+            &quot;human&quot;: &quot;Wed, Apr 3, 2024 9:56 PM&quot;
         }
     },
     &quot;token&quot;: &quot;1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e&quot;
@@ -375,13 +402,13 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 48,
-        &quot;name&quot;: &quot;Miss Shanie Feest II&quot;,
-        &quot;email&quot;: &quot;alia99@example.org&quot;,
+        &quot;id&quot;: 3,
+        &quot;name&quot;: &quot;Prof. Sharon Bailey&quot;,
+        &quot;email&quot;: &quot;margarett88@example.org&quot;,
         &quot;created_at&quot;: {
-            &quot;datetime&quot;: &quot;2024-04-03T17:14:30.000000Z&quot;,
+            &quot;datetime&quot;: &quot;2024-04-03T21:56:52.000000Z&quot;,
             &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
-            &quot;human&quot;: &quot;Wed, Apr 3, 2024 5:14 PM&quot;
+            &quot;human&quot;: &quot;Wed, Apr 3, 2024 9:56 PM&quot;
         }
     },
     &quot;token&quot;: &quot;1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e&quot;
@@ -508,7 +535,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "https://google-drive-clone-api.wip/api/v1/logout" \
-    --header "Authorization: Bearer Za5V4edEgab3Pf6186Dhkvc" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Accept-Language: en" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -520,7 +547,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
-    "Authorization": "Bearer Za5V4edEgab3Pf6186Dhkvc",
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Accept-Language": "en",
     "Content-Type": "application/json",
     "Accept": "application/json",
@@ -594,10 +621,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-logout"
-               value="Bearer Za5V4edEgab3Pf6186Dhkvc"
+               value="Bearer {YOUR_AUTH_KEY}"
                data-component="header">
     <br>
-<p>Example: <code>Bearer Za5V4edEgab3Pf6186Dhkvc</code></p>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
             </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Accept-Language</code></b>&nbsp;&nbsp;
@@ -649,8 +676,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "https://google-drive-clone-api.wip/api/v1/user" \
-    --header "Authorization: Bearer PfVZDe534hab68E1cgadkv6" \
-    --header "Accept-Language:: en" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Accept-Language: en" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -661,8 +688,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
-    "Authorization": "Bearer PfVZDe534hab68E1cgadkv6",
-    "Accept-Language:": "en",
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Accept-Language": "en",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -682,13 +709,13 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 49,
-        &quot;name&quot;: &quot;Serenity Shanahan&quot;,
-        &quot;email&quot;: &quot;kamille.schumm@example.net&quot;,
+        &quot;id&quot;: 4,
+        &quot;name&quot;: &quot;Prof. Eduardo Rippin Sr.&quot;,
+        &quot;email&quot;: &quot;otis41@example.net&quot;,
         &quot;created_at&quot;: {
-            &quot;datetime&quot;: &quot;2024-04-03T17:14:30.000000Z&quot;,
+            &quot;datetime&quot;: &quot;2024-04-03T21:56:52.000000Z&quot;,
             &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
-            &quot;human&quot;: &quot;Wed, Apr 3, 2024 5:14 PM&quot;
+            &quot;human&quot;: &quot;Wed, Apr 3, 2024 9:56 PM&quot;
         }
     }
 }</code>
@@ -747,17 +774,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-user"
-               value="Bearer PfVZDe534hab68E1cgadkv6"
+               value="Bearer {YOUR_AUTH_KEY}"
                data-component="header">
     <br>
-<p>Example: <code>Bearer PfVZDe534hab68E1cgadkv6</code></p>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
             </div>
                                 <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept-Language:</code></b>&nbsp;&nbsp;
+                <b style="line-height: 2;"><code>Accept-Language</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept-Language:"                data-endpoint="GETapi-v1-user"
+                              name="Accept-Language"                data-endpoint="GETapi-v1-user"
                value="en"
                data-component="header">
     <br>
@@ -780,6 +807,656 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Accept"                data-endpoint="GETapi-v1-user"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                                <h2 id="authentication-forgot-password">Forgot Password</h2>
+                                        <p>
+                    <p>Send a reset link to the given user.</p>
+                </p>
+                                        <h2 id="authentication-POSTapi-v1-password-email">Password reset link.</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>Send a reset link to the given user.</p>
+
+<span id="example-requests-POSTapi-v1-password-email">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://google-drive-clone-api.wip/api/v1/password/email" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Accept-Language: en" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"email\": \"john.doe@example.com\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://google-drive-clone-api.wip/api/v1/password/email"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Accept-Language": "en",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "john.doe@example.com"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-password-email">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;We have e-mailed your password reset link.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-password-email" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-password-email"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-password-email"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-password-email" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-password-email">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-v1-password-email" data-method="POST"
+      data-path="api/v1/password/email"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-password-email', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-password-email"
+                    onclick="tryItOut('POSTapi-v1-password-email');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-password-email"
+                    onclick="cancelTryOut('POSTapi-v1-password-email');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-password-email"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/password/email</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-password-email"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept-Language</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept-Language"                data-endpoint="POSTapi-v1-password-email"
+               value="en"
+               data-component="header">
+    <br>
+<p>Example: <code>en</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-v1-password-email"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-v1-password-email"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-v1-password-email"
+               value="john.doe@example.com"
+               data-component="body">
+    <br>
+<p>User email. Must be a valid email address. Example: <code>john.doe@example.com</code></p>
+        </div>
+        </form>
+
+                                <h2 id="authentication-reset-password">Reset Password</h2>
+                                        <p>
+                    <p>Reset the user password.</p>
+                </p>
+                                        <h2 id="authentication-POSTapi-v1-password-reset">Reset password.</h2>
+
+<p>
+</p>
+
+<p>Reset the given user's password.</p>
+
+<span id="example-requests-POSTapi-v1-password-reset">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://google-drive-clone-api.wip/api/v1/password/reset" \
+    --header "Accept-Language: en" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"token\": \"delectus\",
+    \"email\": \"leannon.benton@example.org\",
+    \"password\": \"SV$v~#8`q,EOf%R?\",
+    \"password_confirmation\": \"est\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://google-drive-clone-api.wip/api/v1/password/reset"
+);
+
+const headers = {
+    "Accept-Language": "en",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "token": "delectus",
+    "email": "leannon.benton@example.org",
+    "password": "SV$v~#8`q,EOf%R?",
+    "password_confirmation": "est"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-password-reset">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Your password has been reset.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-password-reset" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-password-reset"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-password-reset"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-password-reset" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-password-reset">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-v1-password-reset" data-method="POST"
+      data-path="api/v1/password/reset"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-password-reset', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-password-reset"
+                    onclick="tryItOut('POSTapi-v1-password-reset');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-password-reset"
+                    onclick="cancelTryOut('POSTapi-v1-password-reset');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-password-reset"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/password/reset</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept-Language</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept-Language"                data-endpoint="POSTapi-v1-password-reset"
+               value="en"
+               data-component="header">
+    <br>
+<p>Example: <code>en</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-v1-password-reset"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-v1-password-reset"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>token</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="token"                data-endpoint="POSTapi-v1-password-reset"
+               value="delectus"
+               data-component="body">
+    <br>
+<p>The reset password token. Example: <code>delectus</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-v1-password-reset"
+               value="leannon.benton@example.org"
+               data-component="body">
+    <br>
+<p>The email address. Must be a valid email address. Example: <code>leannon.benton@example.org</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTapi-v1-password-reset"
+               value="SV$v~#8`q,EOf%R?"
+               data-component="body">
+    <br>
+<p>The new password. Example: <code>SV$v~#8</code>q,EOf%R?`</p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password_confirmation</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password_confirmation"                data-endpoint="POSTapi-v1-password-reset"
+               value="est"
+               data-component="body">
+    <br>
+<p>The password confirmation. Example: <code>est</code></p>
+        </div>
+        </form>
+
+                                <h2 id="authentication-verify-email">Verify Email</h2>
+                                        <p>
+                    <p>Verify user email.</p>
+                </p>
+                                        <h2 id="authentication-GETapi-v1-email-verify--id---hash-">Verify email</h2>
+
+<p>
+</p>
+
+<p>Verify the email of the user.</p>
+
+<span id="example-requests-GETapi-v1-email-verify--id---hash-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://google-drive-clone-api.wip/api/v1/email/verify/1/56Z83cdafEvb1P4VheDga6k" \
+    --header "Accept-Language: en" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://google-drive-clone-api.wip/api/v1/email/verify/1/56Z83cdafEvb1P4VheDga6k"
+);
+
+const headers = {
+    "Accept-Language": "en",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-email-verify--id---hash-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Email successfully verified&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-email-verify--id---hash-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-email-verify--id---hash-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-email-verify--id---hash-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-email-verify--id---hash-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-email-verify--id---hash-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-email-verify--id---hash-" data-method="GET"
+      data-path="api/v1/email/verify/{id}/{hash}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-email-verify--id---hash-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-email-verify--id---hash-"
+                    onclick="tryItOut('GETapi-v1-email-verify--id---hash-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-email-verify--id---hash-"
+                    onclick="cancelTryOut('GETapi-v1-email-verify--id---hash-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-email-verify--id---hash-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/email/verify/{id}/{hash}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept-Language</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept-Language"                data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="en"
+               data-component="header">
+    <br>
+<p>Example: <code>en</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the user. Example: <code>1</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>hash</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="hash"                data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="56Z83cdafEvb1P4VheDga6k"
+               data-component="url">
+    <br>
+<p>The hash of the user. Example: <code>56Z83cdafEvb1P4VheDga6k</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="authentication-POSTapi-v1-email-resend">Resend email</h2>
+
+<p>
+</p>
+
+<p>Resend the email verification notification.</p>
+
+<span id="example-requests-POSTapi-v1-email-resend">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://google-drive-clone-api.wip/api/v1/email/resend" \
+    --header "Accept-Language: en" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://google-drive-clone-api.wip/api/v1/email/resend"
+);
+
+const headers = {
+    "Accept-Language": "en",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-email-resend">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Email verification link sent on your email id&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-email-resend" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-email-resend"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-email-resend"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-email-resend" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-email-resend">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-v1-email-resend" data-method="POST"
+      data-path="api/v1/email/resend"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-email-resend', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-email-resend"
+                    onclick="tryItOut('POSTapi-v1-email-resend');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-email-resend"
+                    onclick="cancelTryOut('POSTapi-v1-email-resend');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-email-resend"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/email/resend</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept-Language</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept-Language"                data-endpoint="POSTapi-v1-email-resend"
+               value="en"
+               data-component="header">
+    <br>
+<p>Example: <code>en</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-v1-email-resend"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-v1-email-resend"
                value="application/json"
                data-component="header">
     <br>

@@ -29,13 +29,13 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 47
-                    name: 'Rudy Reilly'
-                    email: kuvalis.jasmin@example.com
+                    id: 2
+                    name: 'Charles Baumbach'
+                    email: ledner.samson@example.com
                     created_at:
-                      datetime: '2024-04-03T17:14:30.000000Z'
+                      datetime: '2024-04-03T21:56:51.000000Z'
                       human_diff: '0 seconds ago'
-                      human: 'Wed, Apr 3, 2024 5:14 PM'
+                      human: 'Wed, Apr 3, 2024 9:56 PM'
                   token: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
                 properties:
                   data:
@@ -43,25 +43,25 @@ paths:
                     properties:
                       id:
                         type: integer
-                        example: 47
+                        example: 2
                       name:
                         type: string
-                        example: 'Rudy Reilly'
+                        example: 'Charles Baumbach'
                       email:
                         type: string
-                        example: kuvalis.jasmin@example.com
+                        example: ledner.samson@example.com
                       created_at:
                         type: object
                         properties:
                           datetime:
                             type: string
-                            example: '2024-04-03T17:14:30.000000Z'
+                            example: '2024-04-03T21:56:51.000000Z'
                           human_diff:
                             type: string
                             example: '0 seconds ago'
                           human:
                             type: string
-                            example: 'Wed, Apr 3, 2024 5:14 PM'
+                            example: 'Wed, Apr 3, 2024 9:56 PM'
                   token:
                     type: string
                     example: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
@@ -118,13 +118,13 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 48
-                    name: 'Miss Shanie Feest II'
-                    email: alia99@example.org
+                    id: 3
+                    name: 'Prof. Sharon Bailey'
+                    email: margarett88@example.org
                     created_at:
-                      datetime: '2024-04-03T17:14:30.000000Z'
+                      datetime: '2024-04-03T21:56:52.000000Z'
                       human_diff: '0 seconds ago'
-                      human: 'Wed, Apr 3, 2024 5:14 PM'
+                      human: 'Wed, Apr 3, 2024 9:56 PM'
                   token: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
                 properties:
                   data:
@@ -132,25 +132,25 @@ paths:
                     properties:
                       id:
                         type: integer
-                        example: 48
+                        example: 3
                       name:
                         type: string
-                        example: 'Miss Shanie Feest II'
+                        example: 'Prof. Sharon Bailey'
                       email:
                         type: string
-                        example: alia99@example.org
+                        example: margarett88@example.org
                       created_at:
                         type: object
                         properties:
                           datetime:
                             type: string
-                            example: '2024-04-03T17:14:30.000000Z'
+                            example: '2024-04-03T21:56:52.000000Z'
                           human_diff:
                             type: string
                             example: '0 seconds ago'
                           human:
                             type: string
-                            example: 'Wed, Apr 3, 2024 5:14 PM'
+                            example: 'Wed, Apr 3, 2024 9:56 PM'
                   token:
                     type: string
                     example: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
@@ -174,6 +174,179 @@ paths:
               required:
                 - email
                 - password
+      security: []
+  /api/v1/password/email:
+    post:
+      summary: 'Password reset link.'
+      operationId: passwordResetLink
+      description: 'Send a reset link to the given user.'
+      parameters:
+        -
+          in: header
+          name: Accept-Language
+          description: ''
+          example: en
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'We have e-mailed your password reset link.'
+                properties:
+                  message:
+                    type: string
+                    example: 'We have e-mailed your password reset link.'
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'User email. Must be a valid email address.'
+                  example: john.doe@example.com
+              required:
+                - email
+  /api/v1/password/reset:
+    post:
+      summary: 'Reset password.'
+      operationId: resetPassword
+      description: "Reset the given user's password."
+      parameters:
+        -
+          in: header
+          name: Accept-Language
+          description: ''
+          example: en
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Your password has been reset.'
+                properties:
+                  message:
+                    type: string
+                    example: 'Your password has been reset.'
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                  description: 'The reset password token.'
+                  example: delectus
+                email:
+                  type: string
+                  description: 'The email address. Must be a valid email address.'
+                  example: leannon.benton@example.org
+                password:
+                  type: string
+                  description: 'The new password.'
+                  example: 'SV$v~#8`q,EOf%R?'
+                password_confirmation:
+                  type: string
+                  description: 'The password confirmation.'
+                  example: est
+              required:
+                - token
+                - email
+                - password
+                - password_confirmation
+      security: []
+  '/api/v1/email/verify/{id}/{hash}':
+    get:
+      summary: 'Verify email'
+      operationId: verifyEmail
+      description: 'Verify the email of the user.'
+      parameters:
+        -
+          in: header
+          name: Accept-Language
+          description: ''
+          example: en
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Email successfully verified'
+                properties:
+                  message:
+                    type: string
+                    example: 'Email successfully verified'
+      tags:
+        - Authentication
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: '1'
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: hash
+        description: 'The hash of the user.'
+        example: 56Z83cdafEvb1P4VheDga6k
+        required: true
+        schema:
+          type: string
+  /api/v1/email/resend:
+    post:
+      summary: 'Resend email'
+      operationId: resendEmail
+      description: 'Resend the email verification notification.'
+      parameters:
+        -
+          in: header
+          name: Accept-Language
+          description: ''
+          example: en
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Email verification link sent on your email id'
+                properties:
+                  message:
+                    type: string
+                    example: 'Email verification link sent on your email id'
+      tags:
+        - Authentication
       security: []
   /api/v1/logout:
     post:
@@ -201,7 +374,7 @@ paths:
       parameters:
         -
           in: header
-          name: 'Accept-Language:'
+          name: Accept-Language
           description: ''
           example: en
           schema:
@@ -215,38 +388,38 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 49
-                    name: 'Serenity Shanahan'
-                    email: kamille.schumm@example.net
+                    id: 4
+                    name: 'Prof. Eduardo Rippin Sr.'
+                    email: otis41@example.net
                     created_at:
-                      datetime: '2024-04-03T17:14:30.000000Z'
+                      datetime: '2024-04-03T21:56:52.000000Z'
                       human_diff: '0 seconds ago'
-                      human: 'Wed, Apr 3, 2024 5:14 PM'
+                      human: 'Wed, Apr 3, 2024 9:56 PM'
                 properties:
                   data:
                     type: object
                     properties:
                       id:
                         type: integer
-                        example: 49
+                        example: 4
                       name:
                         type: string
-                        example: 'Serenity Shanahan'
+                        example: 'Prof. Eduardo Rippin Sr.'
                       email:
                         type: string
-                        example: kamille.schumm@example.net
+                        example: otis41@example.net
                       created_at:
                         type: object
                         properties:
                           datetime:
                             type: string
-                            example: '2024-04-03T17:14:30.000000Z'
+                            example: '2024-04-03T21:56:52.000000Z'
                           human_diff:
                             type: string
                             example: '0 seconds ago'
                           human:
                             type: string
-                            example: 'Wed, Apr 3, 2024 5:14 PM'
+                            example: 'Wed, Apr 3, 2024 9:56 PM'
       tags:
         - Authentication
 tags:
