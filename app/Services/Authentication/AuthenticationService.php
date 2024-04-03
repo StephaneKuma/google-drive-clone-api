@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Services\Authentication;
 
 use App\Models\User;
@@ -13,6 +15,8 @@ class AuthenticationService implements AuthenticationContract
 {
     /**
      * Create a new class instance.
+     *
+     * @param \App\Repositories\Authentication\AuthenticationRepository $repository
      */
     public function __construct(private readonly AuthenticationRepository $repository)
     {

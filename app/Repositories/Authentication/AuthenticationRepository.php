@@ -21,8 +21,10 @@ class AuthenticationRepository implements AuthenticationContract
      */
     public function register(FormRequest $request): User
     {
+        /** @var array<int, string> $validated */
         $validated = $request->validated();
 
+        /** @var \App\Models\User $user */
         $user = User::create($validated);
 
         return $user;
@@ -61,6 +63,6 @@ class AuthenticationRepository implements AuthenticationContract
         /** @phpstan-ignore-next-line */
         $request->user()->currentAccessToken()->delete();
 
-        return response()->json(['message' => __('Logged out successfully')]);
+        return response()->json(status: JsonResponse::HTTP_NO_CONTENT);
     }
 }

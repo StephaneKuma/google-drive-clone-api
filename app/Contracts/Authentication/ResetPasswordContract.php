@@ -9,5 +9,11 @@ use Illuminate\Foundation\Http\FormRequest;
 
 interface ResetPasswordContract
 {
+    /**
+     * Reset the given user's password.
+     *
+     * @param \Illuminate\Foundation\Http\FormRequest $request description
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function reset(FormRequest $request): JsonResponse;
 }
