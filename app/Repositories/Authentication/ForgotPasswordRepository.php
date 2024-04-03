@@ -19,11 +19,11 @@ class ForgotPasswordRepository implements ForgotPasswordContract
      */
     public function sendResetLinkEmail(FormRequest $request): JsonResponse
     {
-        /** @var array<int, string> $validated */
+        /** @var array<string, string> $validated */
         $validated = $request->validated();
 
         $status = Password::sendResetLink(
-            $validated['email']
+            $validated
         );
 
         return $status === Password::RESET_LINK_SENT ?
