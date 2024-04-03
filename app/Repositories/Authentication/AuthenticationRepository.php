@@ -60,8 +60,10 @@ class AuthenticationRepository implements AuthenticationContract
      */
     public function logout(Request $request): JsonResponse
     {
-        /** @phpstan-ignore-next-line */
-        $request->user()->currentAccessToken()->delete();
+        /** @var \App\Models\User $user */
+        $user = $request->user();
+
+        $user->tokens()->delete();
 
         return response()->json(status: JsonResponse::HTTP_NO_CONTENT);
     }

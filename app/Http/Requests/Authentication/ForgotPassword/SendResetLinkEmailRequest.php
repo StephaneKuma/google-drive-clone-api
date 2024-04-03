@@ -1,12 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
-namespace App\Http\Requests\Authentication;
+namespace App\Http\Requests\Authentication\ForgotPassword;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LoginRequest extends FormRequest
+class SendResetLinkEmailRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +23,6 @@ class LoginRequest extends FormRequest
     {
         return [
             'email' => 'required|email|exists:users',
-            'password' => 'required'
         ];
     }
 
@@ -40,10 +37,6 @@ class LoginRequest extends FormRequest
             'email' => [
                 'description' => 'User email.',
                 'example' => 'john.doe@example.com',
-            ],
-            'password' => [
-                'description' => 'User password.',
-                'example' => 'password',
             ],
         ];
     }

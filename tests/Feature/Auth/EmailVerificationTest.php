@@ -7,7 +7,10 @@ use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\URL;
 
+use function Pest\Laravel\{actingAs, get};
+
 test('email can be verified', function () {
+    /** @var \App\Models\User|\Illuminate\Contracts\Auth\Authenticatable $user */
     $user = User::factory()->create([
         'email_verified_at' => null,
     ]);
@@ -20,11 +23,14 @@ test('email can be verified', function () {
         ['id' => $user->id, 'hash' => sha1($user->email)]
     );
 
-    $response = $this->actingAs($user)->get($verificationUrl);
+    actingAs($user);
+
+    $response = get($verificationUrl);
 
     Event::assertDispatched(Verified::class);
     expect($user->fresh()->hasVerifiedEmail())->toBeTrue();
-    $response->assertRedirect(config('app.frontend_url').'/dashboard?verified=1');
+    $response->assertOk()
+        ->assertJsonStructure(['message']);
 });
 
 test('email is not verified with invalid hash', function () {

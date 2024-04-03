@@ -4,34 +4,39 @@ declare(strict_types=1);
 
 use App\Models\User;
 
-test('users can authenticate using the login screen', function () {
+use function Pest\Laravel\{postJson, actingAs};
+
+test('can log in a user', function () {
     $user = User::factory()->create();
 
-    $response = $this->post('/login', [
+    $response = postJson('/api/v1/login', [
         'email' => $user->email,
         'password' => 'password',
     ]);
 
-    $this->assertAuthenticated();
-    $response->assertNoContent();
+    $response->assertOk()
+        ->assertJsonStructure(['data', 'token']);
 });
 
-test('users can not authenticate with invalid password', function () {
+test('can not log in a user with invalid password', function () {
     $user = User::factory()->create();
 
-    $this->post('/login', [
+    $response = postJson('/api/v1/login', [
         'email' => $user->email,
         'password' => 'wrong-password',
     ]);
 
-    $this->assertGuest();
+    $response->assertStatus(422)
+        ->assertJsonValidationErrorFor('email');
 });
 
-test('users can logout', function () {
+test('can log out a user', function () {
+    /** @var \App\Models\User|\Illuminate\Contracts\Auth\Authenticatable $user */
     $user = User::factory()->create();
 
-    $response = $this->actingAs($user)->post('/logout');
+    actingAs($user);
 
-    $this->assertGuest();
+    $response = postJson('/api/v1/logout');
+
     $response->assertNoContent();
 });
