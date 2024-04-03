@@ -16,7 +16,6 @@
         "kkomelin/laravel-translatable-string-exporter": "^1.22",
         "knuckleswtf/scribe": "^4.35",
         "larastan/larastan": "^2.0",
-        "laravel/breeze": "^2.0",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
