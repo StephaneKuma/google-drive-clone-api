@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,7 +13,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+            \App\Contracts\Authentication\AuthenticationContract::class,
+            \App\Services\Authentication\AuthenticationService::class
+        );
+        $this->app->bind(
+            \App\Services\Authentication\AuthenticationService::class,
+            fn () => new \App\Services\Authentication\AuthenticationService(
+                new \App\Repositories\Authentication\AuthenticationRepository()
+            )
+        );
     }
 
     /**
@@ -22,8 +30,5 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        ResetPassword::createUrlUsing(function (object $notifiable, string $token) {
-            return config('app.frontend_url')."/password-reset/$token?email={$notifiable->getEmailForPasswordReset()}";
-        });
     }
 }

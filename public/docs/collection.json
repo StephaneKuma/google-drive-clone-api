@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Google Drive Clone API",
-        "_postman_id": "aa8bf1f8-6cb3-4ccd-950e-54e964aa7606",
+        "_postman_id": "f0759294-1f7a-4fce-9fbf-3dbe98d1a687",
         "description": "Our API provides comprehensive functionality for managing files and folders in a cloud storage environment, akin to Google Drive. Built with Laravel, it offers robust endpoints for seamless integration with your front-end applications. With secure authentication mechanisms and efficient data handling, our API enables users to upload, download, organize, and share files effortlessly. Whether you're building a personal file repository or a collaborative workspace, our API empowers you to create a powerful cloud storage solution tailored to your needs.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -19,6 +19,55 @@
             "name": "Endpoints",
             "description": "",
             "item": [
+                {
+                    "name": "GET api\/v1\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "http:\/\/localhost:3000"
+                                },
+                                {
+                                    "key": "access-control-allow-credentials",
+                                    "value": "true"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
                 {
                     "name": "GET api\/user",
                     "request": {
@@ -75,6 +124,12 @@
         }
     ],
     "auth": {
-        "type": "noauth"
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "Authorization",
+                "type": "string"
+            }
+        ]
     }
 }
