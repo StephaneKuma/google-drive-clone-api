@@ -2,12 +2,9 @@
 
 declare(strict_types=1);
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Authentication\AuthenticationController;
 use Illuminate\Support\Facades\Route;
 
-/**
- * @authenticated
- */
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::get('user', [AuthenticationController::class, 'currentUser']);
 });

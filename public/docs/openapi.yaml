@@ -7,53 +7,252 @@ servers:
   -
     url: 'https://google-drive-clone-api.wip'
 paths:
+  /api/v1/register:
+    post:
+      summary: 'Register a new user.'
+      operationId: registerANewUser
+      description: 'Registers a user based on the provided registration request'
+      parameters:
+        -
+          in: header
+          name: Accept-Language
+          description: ''
+          example: en
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 47
+                    name: 'Rudy Reilly'
+                    email: kuvalis.jasmin@example.com
+                    created_at:
+                      datetime: '2024-04-03T17:14:30.000000Z'
+                      human_diff: '0 seconds ago'
+                      human: 'Wed, Apr 3, 2024 5:14 PM'
+                  token: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 47
+                      name:
+                        type: string
+                        example: 'Rudy Reilly'
+                      email:
+                        type: string
+                        example: kuvalis.jasmin@example.com
+                      created_at:
+                        type: object
+                        properties:
+                          datetime:
+                            type: string
+                            example: '2024-04-03T17:14:30.000000Z'
+                          human_diff:
+                            type: string
+                            example: '0 seconds ago'
+                          human:
+                            type: string
+                            example: 'Wed, Apr 3, 2024 5:14 PM'
+                  token:
+                    type: string
+                    example: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'User name. Must not be greater than 255 characters.'
+                  example: 'John Doe'
+                email:
+                  type: string
+                  description: 'User email. Must be a valid email address. Must not be greater than 255 characters.'
+                  example: john.doe@example.com
+                password:
+                  type: string
+                  description: 'User password.'
+                  example: password
+                password_confirmation:
+                  type: string
+                  description: 'User password confirmation.'
+                  example: password
+              required:
+                - name
+                - email
+                - password
+                - password_confirmation
+      security: []
+  /api/v1/login:
+    post:
+      summary: 'Login a user'
+      operationId: loginAUser
+      description: 'Logins a user based on the provided login request'
+      parameters:
+        -
+          in: header
+          name: Accept-Language
+          description: ''
+          example: en
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 48
+                    name: 'Miss Shanie Feest II'
+                    email: alia99@example.org
+                    created_at:
+                      datetime: '2024-04-03T17:14:30.000000Z'
+                      human_diff: '0 seconds ago'
+                      human: 'Wed, Apr 3, 2024 5:14 PM'
+                  token: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 48
+                      name:
+                        type: string
+                        example: 'Miss Shanie Feest II'
+                      email:
+                        type: string
+                        example: alia99@example.org
+                      created_at:
+                        type: object
+                        properties:
+                          datetime:
+                            type: string
+                            example: '2024-04-03T17:14:30.000000Z'
+                          human_diff:
+                            type: string
+                            example: '0 seconds ago'
+                          human:
+                            type: string
+                            example: 'Wed, Apr 3, 2024 5:14 PM'
+                  token:
+                    type: string
+                    example: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'User email. Must be a valid email address.'
+                  example: john.doe@example.com
+                password:
+                  type: string
+                  description: 'User password.'
+                  example: password
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/logout:
+    post:
+      summary: 'Signs out a user'
+      operationId: signsOutAUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Accept-Language
+          description: ''
+          example: en
+          schema:
+            type: string
+      responses:
+        204:
+          description: ''
+      tags:
+        - Authentication
   /api/v1/user:
     get:
-      summary: ''
-      operationId: getApiV1User
-      description: ''
-      parameters: []
+      summary: 'Current user'
+      operationId: currentUser
+      description: 'Get the currently authenticated user.'
+      parameters:
+        -
+          in: header
+          name: 'Accept-Language:'
+          description: ''
+          example: en
+          schema:
+            type: string
       responses:
-        401:
+        200:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: Unauthenticated.
+                  data:
+                    id: 49
+                    name: 'Serenity Shanahan'
+                    email: kamille.schumm@example.net
+                    created_at:
+                      datetime: '2024-04-03T17:14:30.000000Z'
+                      human_diff: '0 seconds ago'
+                      human: 'Wed, Apr 3, 2024 5:14 PM'
                 properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 49
+                      name:
+                        type: string
+                        example: 'Serenity Shanahan'
+                      email:
+                        type: string
+                        example: kamille.schumm@example.net
+                      created_at:
+                        type: object
+                        properties:
+                          datetime:
+                            type: string
+                            example: '2024-04-03T17:14:30.000000Z'
+                          human_diff:
+                            type: string
+                            example: '0 seconds ago'
+                          human:
+                            type: string
+                            example: 'Wed, Apr 3, 2024 5:14 PM'
       tags:
-        - Endpoints
-  /api/user:
-    get:
-      summary: ''
-      operationId: getApiUser
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
+        - Authentication
 tags:
   -
-    name: Endpoints
-    description: ''
+    name: Authentication
+    description: "\nAPIs for authentication"
 components:
   securitySchemes:
     default:
