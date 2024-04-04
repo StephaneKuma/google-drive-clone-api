@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -61,5 +62,45 @@ class User extends Authenticatable implements MustVerifyEmail
         return Attribute::make(
             set: fn ($value): string => bcrypt($value),
         );
+    }
+
+    /**
+     * Get all of the files for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\File>
+     */
+    public function files(): HasMany
+    {
+        return $this->hasMany(File::class, 'created_by', 'id');
+    }
+
+    /**
+     * Get all of the editedFiles for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\File>
+     */
+    public function editedFiles(): HasMany
+    {
+        return $this->hasMany(File::class, 'updated_by', 'id');
+    }
+
+    /**
+     * Get all of the fileShared for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\FileShare>
+     */
+    public function fileShared(): HasMany
+    {
+        return $this->hasMany(FileShare::class, 'user_id', 'id');
+    }
+
+    /**
+     * Get all of the starredFile for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\StarredFile>
+     */
+    public function starredFile(): HasMany
+    {
+        return $this->hasMany(StarredFile::class, 'user_id', 'id');
     }
 }
