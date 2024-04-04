@@ -62,6 +62,17 @@ class File extends Node
     }
 
     /**
+     * Check if the item is owned by the specified user ID.
+     *
+     * @param int $userId The user ID to check against
+     * @return bool
+     */
+    public function isOwnedBy(int $userId): bool
+    {
+        return $this->created_by === $userId;
+    }
+
+    /**
      * Get the creator that owns the File
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\App\Models\User, \App\Models\File>
