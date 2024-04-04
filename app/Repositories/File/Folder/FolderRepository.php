@@ -28,10 +28,14 @@ class FolderRepository implements FolderContract
             $parent = File::query()->userRoot()->first();
         }
 
+        $authId = (int) auth()->id();
+
         /** @var \App\Models\File $folder */
         $folder = $parent->children()->create([
             'name' => $validated['name'],
             'is_folder' => true,
+            'created_by' => $authId,
+            'updated_by' => $authId,
         ]);
 
         return $folder;
