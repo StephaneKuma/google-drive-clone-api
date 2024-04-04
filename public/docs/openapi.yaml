@@ -29,13 +29,13 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 2
-                    name: 'Charles Baumbach'
-                    email: ledner.samson@example.com
+                    id: 4
+                    name: 'Prof. Kiara Padberg'
+                    email: fherman@example.com
                     created_at:
-                      datetime: '2024-04-03T21:56:51.000000Z'
+                      datetime: '2024-04-04T16:48:06.000000Z'
                       human_diff: '0 seconds ago'
-                      human: 'Wed, Apr 3, 2024 9:56 PM'
+                      human: 'Thu, Apr 4, 2024 4:48 PM'
                   token: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
                 properties:
                   data:
@@ -43,25 +43,25 @@ paths:
                     properties:
                       id:
                         type: integer
-                        example: 2
+                        example: 4
                       name:
                         type: string
-                        example: 'Charles Baumbach'
+                        example: 'Prof. Kiara Padberg'
                       email:
                         type: string
-                        example: ledner.samson@example.com
+                        example: fherman@example.com
                       created_at:
                         type: object
                         properties:
                           datetime:
                             type: string
-                            example: '2024-04-03T21:56:51.000000Z'
+                            example: '2024-04-04T16:48:06.000000Z'
                           human_diff:
                             type: string
                             example: '0 seconds ago'
                           human:
                             type: string
-                            example: 'Wed, Apr 3, 2024 9:56 PM'
+                            example: 'Thu, Apr 4, 2024 4:48 PM'
                   token:
                     type: string
                     example: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
@@ -118,13 +118,13 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 3
-                    name: 'Prof. Sharon Bailey'
-                    email: margarett88@example.org
+                    id: 5
+                    name: 'Jennifer Bradtke'
+                    email: ibergnaum@example.org
                     created_at:
-                      datetime: '2024-04-03T21:56:52.000000Z'
+                      datetime: '2024-04-04T16:48:06.000000Z'
                       human_diff: '0 seconds ago'
-                      human: 'Wed, Apr 3, 2024 9:56 PM'
+                      human: 'Thu, Apr 4, 2024 4:48 PM'
                   token: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
                 properties:
                   data:
@@ -132,25 +132,25 @@ paths:
                     properties:
                       id:
                         type: integer
-                        example: 3
+                        example: 5
                       name:
                         type: string
-                        example: 'Prof. Sharon Bailey'
+                        example: 'Jennifer Bradtke'
                       email:
                         type: string
-                        example: margarett88@example.org
+                        example: ibergnaum@example.org
                       created_at:
                         type: object
                         properties:
                           datetime:
                             type: string
-                            example: '2024-04-03T21:56:52.000000Z'
+                            example: '2024-04-04T16:48:06.000000Z'
                           human_diff:
                             type: string
                             example: '0 seconds ago'
                           human:
                             type: string
-                            example: 'Wed, Apr 3, 2024 9:56 PM'
+                            example: 'Thu, Apr 4, 2024 4:48 PM'
                   token:
                     type: string
                     example: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
@@ -254,19 +254,19 @@ paths:
                 token:
                   type: string
                   description: 'The reset password token.'
-                  example: delectus
+                  example: quia
                 email:
                   type: string
                   description: 'The email address. Must be a valid email address.'
-                  example: leannon.benton@example.org
+                  example: mona.towne@example.com
                 password:
                   type: string
                   description: 'The new password.'
-                  example: 'SV$v~#8`q,EOf%R?'
+                  example: 'r=0}*h[|m2@GTCY5u)c'
                 password_confirmation:
                   type: string
                   description: 'The password confirmation.'
-                  example: est
+                  example: dolore
               required:
                 - token
                 - email
@@ -388,44 +388,209 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 4
-                    name: 'Prof. Eduardo Rippin Sr.'
-                    email: otis41@example.net
+                    id: 8
+                    name: 'Reanna Gutmann'
+                    email: ciara.champlin@example.com
                     created_at:
-                      datetime: '2024-04-03T21:56:52.000000Z'
+                      datetime: '2024-04-04T16:48:07.000000Z'
                       human_diff: '0 seconds ago'
-                      human: 'Wed, Apr 3, 2024 9:56 PM'
+                      human: 'Thu, Apr 4, 2024 4:48 PM'
                 properties:
                   data:
                     type: object
                     properties:
                       id:
                         type: integer
-                        example: 4
+                        example: 8
                       name:
                         type: string
-                        example: 'Prof. Eduardo Rippin Sr.'
+                        example: 'Reanna Gutmann'
                       email:
                         type: string
-                        example: otis41@example.net
+                        example: ciara.champlin@example.com
                       created_at:
                         type: object
                         properties:
                           datetime:
                             type: string
-                            example: '2024-04-03T21:56:52.000000Z'
+                            example: '2024-04-04T16:48:07.000000Z'
                           human_diff:
                             type: string
                             example: '0 seconds ago'
                           human:
                             type: string
-                            example: 'Wed, Apr 3, 2024 9:56 PM'
+                            example: 'Thu, Apr 4, 2024 4:48 PM'
       tags:
         - Authentication
+  /api/v1/folders:
+    post:
+      summary: 'Create folder'
+      operationId: createFolder
+      description: 'Store a newly created folder.'
+      parameters:
+        -
+          in: header
+          name: Accept-Language
+          description: ''
+          example: en
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'Janae Schuppe PhD'
+                    path: 'http://www.fadel.biz/quaerat-quasi-necessitatibus-aliquid-nihil-tempora'
+                    storage_path: 'http://www.block.com/'
+                    parent_id: null
+                    lft: 1
+                    rgt: 2
+                    depth: 0
+                    is_folder: false
+                    mime: image/svg+xml
+                    size: 805644
+                    owner: 'Wendell Donnelly'
+                    uploaded_on_cloud: false
+                    created_by:
+                      id: 6
+                      name: 'Wendell Donnelly'
+                      email: ellie17@example.net
+                      created_at:
+                        datetime: '2024-04-04T16:48:07.000000Z'
+                        human_diff: '0 seconds ago'
+                        human: 'Thu, Apr 4, 2024 4:48 PM'
+                    created_at:
+                      datetime: '2024-04-04T16:48:07.000000Z'
+                      human_diff: '0 seconds ago'
+                      human: 'Thu, Apr 4, 2024 4:48 PM'
+                    updated_at:
+                      datetime: '2024-04-04T16:48:07.000000Z'
+                      human_diff: '0 seconds ago'
+                      human: 'Thu, Apr 4, 2024 4:48 PM'
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: 'Janae Schuppe PhD'
+                      path:
+                        type: string
+                        example: 'http://www.fadel.biz/quaerat-quasi-necessitatibus-aliquid-nihil-tempora'
+                      storage_path:
+                        type: string
+                        example: 'http://www.block.com/'
+                      parent_id:
+                        type: string
+                        example: null
+                      lft:
+                        type: integer
+                        example: 1
+                      rgt:
+                        type: integer
+                        example: 2
+                      depth:
+                        type: integer
+                        example: 0
+                      is_folder:
+                        type: boolean
+                        example: false
+                      mime:
+                        type: string
+                        example: image/svg+xml
+                      size:
+                        type: integer
+                        example: 805644
+                      owner:
+                        type: string
+                        example: 'Wendell Donnelly'
+                      uploaded_on_cloud:
+                        type: boolean
+                        example: false
+                      created_by:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 6
+                          name:
+                            type: string
+                            example: 'Wendell Donnelly'
+                          email:
+                            type: string
+                            example: ellie17@example.net
+                          created_at:
+                            type: object
+                            properties:
+                              datetime:
+                                type: string
+                                example: '2024-04-04T16:48:07.000000Z'
+                              human_diff:
+                                type: string
+                                example: '0 seconds ago'
+                              human:
+                                type: string
+                                example: 'Thu, Apr 4, 2024 4:48 PM'
+                      created_at:
+                        type: object
+                        properties:
+                          datetime:
+                            type: string
+                            example: '2024-04-04T16:48:07.000000Z'
+                          human_diff:
+                            type: string
+                            example: '0 seconds ago'
+                          human:
+                            type: string
+                            example: 'Thu, Apr 4, 2024 4:48 PM'
+                      updated_at:
+                        type: object
+                        properties:
+                          datetime:
+                            type: string
+                            example: '2024-04-04T16:48:07.000000Z'
+                          human_diff:
+                            type: string
+                            example: '0 seconds ago'
+                          human:
+                            type: string
+                            example: 'Thu, Apr 4, 2024 4:48 PM'
+      tags:
+        - 'Files Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                parent_id:
+                  type: string
+                  description: 'The ID of the parent folder.'
+                  example: '1'
+                name:
+                  type: string
+                  description: 'The name of the folder. Must not be greater than 1024 characters.'
+                  example: uomktxztfmquyjdbrpcrrozw
+              required:
+                - parent_id
+                - name
 tags:
   -
     name: Authentication
     description: "\nAPIs for authentication"
+  -
+    name: 'Files Management'
+    description: "\nAPIs for managing users files"
 components:
   securitySchemes:
     default:

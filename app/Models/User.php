@@ -40,13 +40,6 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
 
     /**
-     * The relations to eager load on every query.
-     *
-     * @var array<int, string>
-     */
-    protected $with = ['files'];
-
-    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>

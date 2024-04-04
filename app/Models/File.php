@@ -5,10 +5,16 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Baum\Node;
+use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * @property string $owner
+ */
 class File extends Node
 {
     use HasFactory;
@@ -16,10 +22,19 @@ class File extends Node
     protected static function booting()
     {
         if (auth()->check()) {
-            // static::creating(function (self $file) {
-            //     $file->created_by = auth()->id();
-            //     $file->updated_by = auth()->id();
-            // });
+            static::creating(function (self $file) {
+                $file->created_by = (int) auth()->id();
+                $file->updated_by = (int) auth()->id();
+
+                if (!$file->parent) {
+                    return;
+                }
+
+                /** @var File $parent */
+                $parent = $file->parent;
+
+                $file->path = (!$parent->isRoot() ? $parent->path . '/' : '') . Str::slug($file->name);
+            });
 
             static::updating(function (self $file) {
                 $file->updated_by = (int) auth()->id();
@@ -49,6 +64,15 @@ class File extends Node
     ];
 
     /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array<int, string>
+     */
+    protected $appends = [
+        'owner'
+    ];
+
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -59,6 +83,42 @@ class File extends Node
             'is_folder' => 'boolean',
             'uploaded_on_cloud' => 'boolean',
         ];
+    }
+
+    /**
+     * Retrieve the owner attribute based on the creator of the item.
+     *
+     * @return \Illuminate\Database\Eloquent\Casts\Attribute<string, never>
+     */
+    public function owner(): Attribute
+    {
+        return Attribute::make(
+            get: function (mixed $value, array $attributes): string {
+                return $attributes['created_by'] == (int) auth()->id() ? 'me' : $this->creator->name;
+            }
+        );
+    }
+
+    /**
+     * Check if the item is owned by the specified user ID.
+     *
+     * @param int $userId The user ID to check against
+     * @return bool
+     */
+    public function isOwnedBy(int $userId): bool
+    {
+        return $this->created_by === $userId;
+    }
+
+    /**
+     * Get the root node
+     *
+     * @param \Illuminate\Database\Eloquent\Builder<\App\Models\File> $query description
+     */
+    public function scopeUserRoot(Builder $query): void
+    {
+        $query->where('created_by', (int) auth()->id())
+            ->where('parent_id', null);
     }
 
     /**
