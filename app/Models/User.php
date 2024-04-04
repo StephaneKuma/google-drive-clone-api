@@ -40,6 +40,13 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
 
     /**
+     * The relations to eager load on every query.
+     *
+     * @var array<int, string>
+     */
+    protected $with = ['files'];
+
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -75,11 +82,11 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
-     * Get all of the editedFiles for the User
+     * Get all of the updatedFiles for the User
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany<\App\Models\File>
      */
-    public function editedFiles(): HasMany
+    public function updatedFiles(): HasMany
     {
         return $this->hasMany(File::class, 'updated_by', 'id');
     }

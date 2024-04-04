@@ -24,6 +24,7 @@ class UserResource extends JsonResource
             'name' => $this->name,
             'email' => $this->email,
             'created_at' => new DateTimeResource($this->created_at),
+            'files' => FileResource::collection($this->whenLoaded('files')),
         ];
     }
 }
