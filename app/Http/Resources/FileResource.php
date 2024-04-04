@@ -29,10 +29,12 @@ class FileResource extends JsonResource
             'is_folder' => $this->is_folder,
             'mime' => $this->mime,
             'size' => $this->size,
+            'owner' => $this->owner,
             'uploaded_on_cloud' => $this->uploaded_on_cloud,
             'created_by' => new UserResource($this->whenLoaded('creator')),
             'updated_by' => new UserResource($this->whenLoaded('updater')),
             'created_at' => new DateTimeResource($this->created_at),
+            'updated_at' => new DateTimeResource($this->updated_at),
         ];
     }
 }

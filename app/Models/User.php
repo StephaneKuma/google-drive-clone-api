@@ -44,7 +44,7 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array<int, string>
      */
-    protected $with = ['files'];
+    // protected $with = ['files'];
 
     /**
      * Get the attributes that should be cast.
