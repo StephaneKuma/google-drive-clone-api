@@ -10,6 +10,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\ValidationException;
 use App\Contracts\Authentication\AuthenticationContract;
+use App\Models\File;
 
 class AuthenticationRepository implements AuthenticationContract
 {
@@ -27,7 +28,15 @@ class AuthenticationRepository implements AuthenticationContract
         /** @var \App\Models\User $user */
         $user = User::create($validated);
 
-        return $user;
+        File::create([
+                'name' => $user->email,
+                'is_folder' => true,
+                'parent_id' => null,
+                'created_by' => $user->id,
+                'updated_by' => $user->id,
+            ]);
+
+        return $user->load(['files']);
     }
 
     /**

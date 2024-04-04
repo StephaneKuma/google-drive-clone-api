@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Baum\Node;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,6 +12,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class File extends Node
 {
     use HasFactory;
+
+    protected static function booting()
+    {
+        if (auth()->check()) {
+            // static::creating(function (self $file) {
+            //     $file->created_by = auth()->id();
+            //     $file->updated_by = auth()->id();
+            // });
+
+            static::updating(function (self $file) {
+                $file->updated_by = (int) auth()->id();
+            });
+        }
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -59,11 +72,11 @@ class File extends Node
     }
 
     /**
-     * Get the editor that owns the File
+     * Get the updater that owns the File
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\App\Models\User, \App\Models\File>
      */
-    public function editor(): BelongsTo
+    public function updater(): BelongsTo
     {
         return $this->belongsTo(User::class, 'updated_by');
     }
