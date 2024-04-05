@@ -85,7 +85,7 @@ test('can create a subfolder', function () {
 });
 
 
-test('can not create a folder with invalid parent', function () {
+test('can not create a folder under another user folder', function () {
     postJson('/api/v1/register', [
         'name' => 'Test User',
         'email' => 'test@example.com',
@@ -109,8 +109,10 @@ test('can not create a folder with invalid parent', function () {
         'name' => 'Test Folder',
     ]);
 
-    $response->assertUnprocessable()
-        ->assertJsonValidationErrorFor('parent_id');
+    $response->assertForbidden()
+        ->assertJsonStructure([
+            'message'
+        ]);
 });
 
 test('can not create a folder with already existing name', function () {

@@ -14,5 +14,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::prefix('files')->group(function () {
         Route::get('{folder?}', [FileController::class, 'index'])
             ->where('folder', '(.*)');
+        Route::post('', [FileController::class, 'store']);
     });
 });

@@ -6,7 +6,9 @@ namespace App\Http\Controllers\File;
 
 use App\Contracts\File\FileContract;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\File\StoreRequest;
 use App\Http\Resources\FileResource;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
@@ -48,5 +50,10 @@ class FileController extends Controller
         $files = $this->service->index();
 
         return FileResource::collection($files);
+    }
+
+    public function store(StoreRequest $request): JsonResponse
+    {
+        return $this->service->store($request);
     }
 }

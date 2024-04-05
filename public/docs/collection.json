@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Google Drive Clone API",
-        "_postman_id": "09421870-ef9d-45eb-bfad-9425cd12e461",
+        "_postman_id": "ba0e954a-df7b-4412-92ef-8f8d2683768a",
         "description": "Our API provides comprehensive functionality for managing files and folders in a cloud storage environment, akin to Google Drive. Built with Laravel, it offers robust endpoints for seamless integration with your front-end applications. With secure authentication mechanisms and efficient data handling, our API enables users to upload, download, organize, and share files effortlessly. Whether you're building a personal file repository or a collaborative workspace, our API empowers you to create a powerful cloud storage solution tailored to your needs.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -56,7 +56,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":16,\"name\":\"Janis Nikolaus\",\"email\":\"hkeebler@example.com\",\"created_at\":{\"datetime\":\"2024-04-05T15:59:19.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 3:59 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
+                            "body": "{\"data\":{\"id\":2,\"name\":\"Wilfrid Kohler Jr.\",\"email\":\"yreichert@example.org\",\"created_at\":{\"datetime\":\"2024-04-05T20:22:29.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 8:22 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
                             "name": ""
                         }
                     ]
@@ -98,7 +98,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":17,\"name\":\"Prof. Roman Jakubowski\",\"email\":\"destiny.toy@example.org\",\"created_at\":{\"datetime\":\"2024-04-05T15:59:20.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 3:59 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
+                            "body": "{\"data\":{\"id\":3,\"name\":\"Mallie Kulas\",\"email\":\"vida.kreiger@example.com\",\"created_at\":{\"datetime\":\"2024-04-05T20:22:29.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 8:22 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
                             "name": ""
                         }
                     ]
@@ -178,7 +178,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"token\":\"similique\",\"email\":\"erunte@example.org\",\"password\":\"_pp%AyxH}4ZUry'559\",\"password_confirmation\":\"vel\"}"
+                                    "raw": "{\"token\":\"ipsum\",\"email\":\"ibernhard@example.net\",\"password\":\"_S7&L)nGl\",\"password_confirmation\":\"facilis\"}"
                                 },
                                 "description": "Reset the given user's password.",
                                 "auth": {
@@ -361,7 +361,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":28,\"name\":\"Dr. Elvis Parisian\",\"email\":\"ddeckow@example.org\",\"created_at\":{\"datetime\":\"2024-04-05T15:59:23.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 3:59 PM\"}}}",
+                            "body": "{\"data\":{\"id\":14,\"name\":\"Alycia Rohan\",\"email\":\"ybednar@example.org\",\"created_at\":{\"datetime\":\"2024-04-05T20:22:33.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 8:22 PM\"}}}",
                             "name": ""
                         }
                     ]
@@ -402,7 +402,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"parent_id\":\"1\",\"name\":\"pcnlejbpmqewmquundqhy\"}"
+                                    "raw": "{\"parent_id\":\"1\",\"name\":\"tndurchflmngyjowjfatdtag\"}"
                                 },
                                 "description": "Store a newly created folder."
                             },
@@ -410,7 +410,7 @@
                                 {
                                     "header": [],
                                     "code": 200,
-                                    "body": "{\"data\":{\"id\":null,\"name\":\"Concepcion Reynolds\",\"path\":\"http:\\\/\\\/www.beatty.info\\\/\",\"storage_path\":\"http:\\\/\\\/www.fadel.info\\\/\",\"parent_id\":1,\"lft\":2,\"rgt\":3,\"depth\":0,\"is_folder\":true,\"mime\":\"application\\\/vnd.ms-excel.sheet.macroenabled.12\",\"size\":156636,\"owner\":\"Prof. Sincere Mann III\",\"uploaded_on_cloud\":true,\"created_by\":{\"id\":20,\"name\":\"Prof. Sincere Mann III\",\"email\":\"carolina64@example.org\",\"created_at\":{\"datetime\":\"2024-04-05T15:59:21.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 3:59 PM\"}},\"created_at\":null,\"updated_at\":null}}",
+                                    "body": "{\"data\":{\"id\":null,\"name\":\"Cecil Schoen\",\"path\":\"http:\\\/\\\/www.johnston.biz\\\/officiis-nobis-maxime-id-fuga-quia-esse-impedit.html\",\"storage_path\":\"http:\\\/\\\/www.graham.com\\\/et-id-iusto-laborum-aut-consectetur-reprehenderit-delectus.html\",\"parent_id\":null,\"lft\":1,\"rgt\":2,\"depth\":0,\"is_folder\":true,\"mime\":\"audio\\\/x-ms-wma\",\"size\":488689,\"owner\":\"Miss Lexi Simonis DVM\",\"uploaded_on_cloud\":false,\"created_by\":{\"id\":6,\"name\":\"Miss Lexi Simonis DVM\",\"email\":\"dhilpert@example.org\",\"created_at\":{\"datetime\":\"2024-04-05T20:22:30.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 8:22 PM\"}},\"created_at\":null,\"updated_at\":null}}",
                                     "name": ""
                                 }
                             ]
@@ -468,10 +468,38 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":null,\"name\":\"Bridget Harvey\",\"path\":\"https:\\\/\\\/emard.com\\\/sit-qui-sint-sunt-fuga-autem.html\",\"storage_path\":\"http:\\\/\\\/schroeder.biz\\\/ducimus-veniam-architecto-occaecati-consequatur-necessitatibus\",\"parent_id\":1,\"lft\":2,\"rgt\":3,\"depth\":0,\"is_folder\":false,\"mime\":\"application\\\/xaml+xml\",\"size\":523127,\"owner\":\"Hillary Blanda\",\"uploaded_on_cloud\":true,\"created_by\":{\"id\":24,\"name\":\"Hillary Blanda\",\"email\":\"bernice.dietrich@example.com\",\"created_at\":{\"datetime\":\"2024-04-05T15:59:22.000000Z\",\"human_diff\":\"1 second ago\",\"human\":\"Fri, Apr 5, 2024 3:59 PM\"}},\"created_at\":null,\"updated_at\":null},{\"id\":18,\"name\":\"Mrs. Cassidy Cole\",\"path\":\"http:\\\/\\\/www.altenwerth.com\\\/\",\"storage_path\":\"http:\\\/\\\/lehner.com\\\/iusto-sint-ab-voluptas-sed-repudiandae-alias-sed.html\",\"parent_id\":null,\"lft\":3,\"rgt\":4,\"depth\":0,\"is_folder\":false,\"mime\":\"application\\\/vnd.ms-officetheme\",\"size\":398627,\"owner\":\"Leland Feest\",\"uploaded_on_cloud\":false,\"created_by\":{\"id\":26,\"name\":\"Leland Feest\",\"email\":\"julian74@example.com\",\"created_at\":{\"datetime\":\"2024-04-05T15:59:23.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 3:59 PM\"}},\"created_at\":{\"datetime\":\"2024-04-05T15:59:23.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 3:59 PM\"},\"updated_at\":{\"datetime\":\"2024-04-05T15:59:23.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 3:59 PM\"}}]}",
+                            "body": "{\"data\":[{\"id\":null,\"name\":\"Pasquale O'Kon\",\"path\":\"http:\\\/\\\/jenkins.com\\\/delectus-quas-voluptate-ut-atque-explicabo-odit\",\"storage_path\":\"http:\\\/\\\/www.monahan.com\\\/voluptas-expedita-aut-consequuntur-aut\",\"parent_id\":null,\"lft\":1,\"rgt\":2,\"depth\":0,\"is_folder\":false,\"mime\":\"application\\\/vnd.xfdl\",\"size\":50087,\"owner\":\"Mary Johnson\",\"uploaded_on_cloud\":false,\"created_by\":{\"id\":10,\"name\":\"Mary Johnson\",\"email\":\"cody.schulist@example.org\",\"created_at\":{\"datetime\":\"2024-04-05T20:22:31.000000Z\",\"human_diff\":\"1 second ago\",\"human\":\"Fri, Apr 5, 2024 8:22 PM\"}},\"created_at\":null,\"updated_at\":null},{\"id\":4,\"name\":\"Chaz Hartmann\",\"path\":\"http:\\\/\\\/www.schroeder.com\\\/\",\"storage_path\":\"https:\\\/\\\/spencer.com\\\/et-voluptatum-similique-quos-et-velit-quis-asperiores-accusamus.html\",\"parent_id\":null,\"lft\":3,\"rgt\":4,\"depth\":0,\"is_folder\":true,\"mime\":\"video\\\/vnd.ms-playready.media.pyv\",\"size\":118127,\"owner\":\"Grant Beatty\",\"uploaded_on_cloud\":true,\"created_by\":{\"id\":12,\"name\":\"Grant Beatty\",\"email\":\"balistreri.rogers@example.org\",\"created_at\":{\"datetime\":\"2024-04-05T20:22:32.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 8:22 PM\"}},\"created_at\":{\"datetime\":\"2024-04-05T20:22:32.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 8:22 PM\"},\"updated_at\":{\"datetime\":\"2024-04-05T20:22:32.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Fri, Apr 5, 2024 8:22 PM\"}}]}",
                             "name": ""
                         }
                     ]
+                },
+                {
+                    "name": "POST api\/v1\/files",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/files",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/files"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"parent_id\":\"1\",\"folder_name\":\"esse\",\"files\":[\"image.png\"]}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
                 }
             ]
         }

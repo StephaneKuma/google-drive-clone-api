@@ -29,13 +29,13 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 16
-                    name: 'Janis Nikolaus'
-                    email: hkeebler@example.com
+                    id: 2
+                    name: 'Wilfrid Kohler Jr.'
+                    email: yreichert@example.org
                     created_at:
-                      datetime: '2024-04-05T15:59:19.000000Z'
+                      datetime: '2024-04-05T20:22:29.000000Z'
                       human_diff: '0 seconds ago'
-                      human: 'Fri, Apr 5, 2024 3:59 PM'
+                      human: 'Fri, Apr 5, 2024 8:22 PM'
                   token: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
                 properties:
                   data:
@@ -43,25 +43,25 @@ paths:
                     properties:
                       id:
                         type: integer
-                        example: 16
+                        example: 2
                       name:
                         type: string
-                        example: 'Janis Nikolaus'
+                        example: 'Wilfrid Kohler Jr.'
                       email:
                         type: string
-                        example: hkeebler@example.com
+                        example: yreichert@example.org
                       created_at:
                         type: object
                         properties:
                           datetime:
                             type: string
-                            example: '2024-04-05T15:59:19.000000Z'
+                            example: '2024-04-05T20:22:29.000000Z'
                           human_diff:
                             type: string
                             example: '0 seconds ago'
                           human:
                             type: string
-                            example: 'Fri, Apr 5, 2024 3:59 PM'
+                            example: 'Fri, Apr 5, 2024 8:22 PM'
                   token:
                     type: string
                     example: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
@@ -118,13 +118,13 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 17
-                    name: 'Prof. Roman Jakubowski'
-                    email: destiny.toy@example.org
+                    id: 3
+                    name: 'Mallie Kulas'
+                    email: vida.kreiger@example.com
                     created_at:
-                      datetime: '2024-04-05T15:59:20.000000Z'
+                      datetime: '2024-04-05T20:22:29.000000Z'
                       human_diff: '0 seconds ago'
-                      human: 'Fri, Apr 5, 2024 3:59 PM'
+                      human: 'Fri, Apr 5, 2024 8:22 PM'
                   token: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
                 properties:
                   data:
@@ -132,25 +132,25 @@ paths:
                     properties:
                       id:
                         type: integer
-                        example: 17
+                        example: 3
                       name:
                         type: string
-                        example: 'Prof. Roman Jakubowski'
+                        example: 'Mallie Kulas'
                       email:
                         type: string
-                        example: destiny.toy@example.org
+                        example: vida.kreiger@example.com
                       created_at:
                         type: object
                         properties:
                           datetime:
                             type: string
-                            example: '2024-04-05T15:59:20.000000Z'
+                            example: '2024-04-05T20:22:29.000000Z'
                           human_diff:
                             type: string
                             example: '0 seconds ago'
                           human:
                             type: string
-                            example: 'Fri, Apr 5, 2024 3:59 PM'
+                            example: 'Fri, Apr 5, 2024 8:22 PM'
                   token:
                     type: string
                     example: 1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e
@@ -254,19 +254,19 @@ paths:
                 token:
                   type: string
                   description: 'The reset password token.'
-                  example: similique
+                  example: ipsum
                 email:
                   type: string
                   description: 'The email address. Must be a valid email address.'
-                  example: erunte@example.org
+                  example: ibernhard@example.net
                 password:
                   type: string
                   description: 'The new password.'
-                  example: "_pp%AyxH}4ZUry'559"
+                  example: '_S7&L)nGl'
                 password_confirmation:
                   type: string
                   description: 'The password confirmation.'
-                  example: vel
+                  example: facilis
               required:
                 - token
                 - email
@@ -388,38 +388,38 @@ paths:
                 type: object
                 example:
                   data:
-                    id: 28
-                    name: 'Dr. Elvis Parisian'
-                    email: ddeckow@example.org
+                    id: 14
+                    name: 'Alycia Rohan'
+                    email: ybednar@example.org
                     created_at:
-                      datetime: '2024-04-05T15:59:23.000000Z'
+                      datetime: '2024-04-05T20:22:33.000000Z'
                       human_diff: '0 seconds ago'
-                      human: 'Fri, Apr 5, 2024 3:59 PM'
+                      human: 'Fri, Apr 5, 2024 8:22 PM'
                 properties:
                   data:
                     type: object
                     properties:
                       id:
                         type: integer
-                        example: 28
+                        example: 14
                       name:
                         type: string
-                        example: 'Dr. Elvis Parisian'
+                        example: 'Alycia Rohan'
                       email:
                         type: string
-                        example: ddeckow@example.org
+                        example: ybednar@example.org
                       created_at:
                         type: object
                         properties:
                           datetime:
                             type: string
-                            example: '2024-04-05T15:59:23.000000Z'
+                            example: '2024-04-05T20:22:33.000000Z'
                           human_diff:
                             type: string
                             example: '0 seconds ago'
                           human:
                             type: string
-                            example: 'Fri, Apr 5, 2024 3:59 PM'
+                            example: 'Fri, Apr 5, 2024 8:22 PM'
       tags:
         - Authentication
   /api/v1/folders:
@@ -445,26 +445,26 @@ paths:
                 example:
                   data:
                     id: null
-                    name: 'Concepcion Reynolds'
-                    path: 'http://www.beatty.info/'
-                    storage_path: 'http://www.fadel.info/'
-                    parent_id: 1
-                    lft: 2
-                    rgt: 3
+                    name: 'Cecil Schoen'
+                    path: 'http://www.johnston.biz/officiis-nobis-maxime-id-fuga-quia-esse-impedit.html'
+                    storage_path: 'http://www.graham.com/et-id-iusto-laborum-aut-consectetur-reprehenderit-delectus.html'
+                    parent_id: null
+                    lft: 1
+                    rgt: 2
                     depth: 0
                     is_folder: true
-                    mime: application/vnd.ms-excel.sheet.macroenabled.12
-                    size: 156636
-                    owner: 'Prof. Sincere Mann III'
-                    uploaded_on_cloud: true
+                    mime: audio/x-ms-wma
+                    size: 488689
+                    owner: 'Miss Lexi Simonis DVM'
+                    uploaded_on_cloud: false
                     created_by:
-                      id: 20
-                      name: 'Prof. Sincere Mann III'
-                      email: carolina64@example.org
+                      id: 6
+                      name: 'Miss Lexi Simonis DVM'
+                      email: dhilpert@example.org
                       created_at:
-                        datetime: '2024-04-05T15:59:21.000000Z'
+                        datetime: '2024-04-05T20:22:30.000000Z'
                         human_diff: '0 seconds ago'
-                        human: 'Fri, Apr 5, 2024 3:59 PM'
+                        human: 'Fri, Apr 5, 2024 8:22 PM'
                     created_at: null
                     updated_at: null
                 properties:
@@ -476,22 +476,22 @@ paths:
                         example: null
                       name:
                         type: string
-                        example: 'Concepcion Reynolds'
+                        example: 'Cecil Schoen'
                       path:
                         type: string
-                        example: 'http://www.beatty.info/'
+                        example: 'http://www.johnston.biz/officiis-nobis-maxime-id-fuga-quia-esse-impedit.html'
                       storage_path:
                         type: string
-                        example: 'http://www.fadel.info/'
+                        example: 'http://www.graham.com/et-id-iusto-laborum-aut-consectetur-reprehenderit-delectus.html'
                       parent_id:
-                        type: integer
-                        example: 1
+                        type: string
+                        example: null
                       lft:
                         type: integer
-                        example: 2
+                        example: 1
                       rgt:
                         type: integer
-                        example: 3
+                        example: 2
                       depth:
                         type: integer
                         example: 0
@@ -500,40 +500,40 @@ paths:
                         example: true
                       mime:
                         type: string
-                        example: application/vnd.ms-excel.sheet.macroenabled.12
+                        example: audio/x-ms-wma
                       size:
                         type: integer
-                        example: 156636
+                        example: 488689
                       owner:
                         type: string
-                        example: 'Prof. Sincere Mann III'
+                        example: 'Miss Lexi Simonis DVM'
                       uploaded_on_cloud:
                         type: boolean
-                        example: true
+                        example: false
                       created_by:
                         type: object
                         properties:
                           id:
                             type: integer
-                            example: 20
+                            example: 6
                           name:
                             type: string
-                            example: 'Prof. Sincere Mann III'
+                            example: 'Miss Lexi Simonis DVM'
                           email:
                             type: string
-                            example: carolina64@example.org
+                            example: dhilpert@example.org
                           created_at:
                             type: object
                             properties:
                               datetime:
                                 type: string
-                                example: '2024-04-05T15:59:21.000000Z'
+                                example: '2024-04-05T20:22:30.000000Z'
                               human_diff:
                                 type: string
                                 example: '0 seconds ago'
                               human:
                                 type: string
-                                example: 'Fri, Apr 5, 2024 3:59 PM'
+                                example: 'Fri, Apr 5, 2024 8:22 PM'
                       created_at:
                         type: string
                         example: null
@@ -556,7 +556,7 @@ paths:
                 name:
                   type: string
                   description: 'The name of the folder. Must not be greater than 1024 characters.'
-                  example: pcnlejbpmqewmquundqhy
+                  example: tndurchflmngyjowjfatdtag
               required:
                 - parent_id
                 - name
@@ -584,116 +584,116 @@ paths:
                   data:
                     -
                       id: null
-                      name: 'Bridget Harvey'
-                      path: 'https://emard.com/sit-qui-sint-sunt-fuga-autem.html'
-                      storage_path: 'http://schroeder.biz/ducimus-veniam-architecto-occaecati-consequatur-necessitatibus'
-                      parent_id: 1
-                      lft: 2
-                      rgt: 3
+                      name: "Pasquale O'Kon"
+                      path: 'http://jenkins.com/delectus-quas-voluptate-ut-atque-explicabo-odit'
+                      storage_path: 'http://www.monahan.com/voluptas-expedita-aut-consequuntur-aut'
+                      parent_id: null
+                      lft: 1
+                      rgt: 2
                       depth: 0
                       is_folder: false
-                      mime: application/xaml+xml
-                      size: 523127
-                      owner: 'Hillary Blanda'
-                      uploaded_on_cloud: true
+                      mime: application/vnd.xfdl
+                      size: 50087
+                      owner: 'Mary Johnson'
+                      uploaded_on_cloud: false
                       created_by:
-                        id: 24
-                        name: 'Hillary Blanda'
-                        email: bernice.dietrich@example.com
+                        id: 10
+                        name: 'Mary Johnson'
+                        email: cody.schulist@example.org
                         created_at:
-                          datetime: '2024-04-05T15:59:22.000000Z'
+                          datetime: '2024-04-05T20:22:31.000000Z'
                           human_diff: '1 second ago'
-                          human: 'Fri, Apr 5, 2024 3:59 PM'
+                          human: 'Fri, Apr 5, 2024 8:22 PM'
                       created_at: null
                       updated_at: null
                     -
-                      id: 18
-                      name: 'Mrs. Cassidy Cole'
-                      path: 'http://www.altenwerth.com/'
-                      storage_path: 'http://lehner.com/iusto-sint-ab-voluptas-sed-repudiandae-alias-sed.html'
+                      id: 4
+                      name: 'Chaz Hartmann'
+                      path: 'http://www.schroeder.com/'
+                      storage_path: 'https://spencer.com/et-voluptatum-similique-quos-et-velit-quis-asperiores-accusamus.html'
                       parent_id: null
                       lft: 3
                       rgt: 4
                       depth: 0
-                      is_folder: false
-                      mime: application/vnd.ms-officetheme
-                      size: 398627
-                      owner: 'Leland Feest'
-                      uploaded_on_cloud: false
+                      is_folder: true
+                      mime: video/vnd.ms-playready.media.pyv
+                      size: 118127
+                      owner: 'Grant Beatty'
+                      uploaded_on_cloud: true
                       created_by:
-                        id: 26
-                        name: 'Leland Feest'
-                        email: julian74@example.com
+                        id: 12
+                        name: 'Grant Beatty'
+                        email: balistreri.rogers@example.org
                         created_at:
-                          datetime: '2024-04-05T15:59:23.000000Z'
+                          datetime: '2024-04-05T20:22:32.000000Z'
                           human_diff: '0 seconds ago'
-                          human: 'Fri, Apr 5, 2024 3:59 PM'
+                          human: 'Fri, Apr 5, 2024 8:22 PM'
                       created_at:
-                        datetime: '2024-04-05T15:59:23.000000Z'
+                        datetime: '2024-04-05T20:22:32.000000Z'
                         human_diff: '0 seconds ago'
-                        human: 'Fri, Apr 5, 2024 3:59 PM'
+                        human: 'Fri, Apr 5, 2024 8:22 PM'
                       updated_at:
-                        datetime: '2024-04-05T15:59:23.000000Z'
+                        datetime: '2024-04-05T20:22:32.000000Z'
                         human_diff: '0 seconds ago'
-                        human: 'Fri, Apr 5, 2024 3:59 PM'
+                        human: 'Fri, Apr 5, 2024 8:22 PM'
                 properties:
                   data:
                     type: array
                     example:
                       -
                         id: null
-                        name: 'Bridget Harvey'
-                        path: 'https://emard.com/sit-qui-sint-sunt-fuga-autem.html'
-                        storage_path: 'http://schroeder.biz/ducimus-veniam-architecto-occaecati-consequatur-necessitatibus'
-                        parent_id: 1
-                        lft: 2
-                        rgt: 3
+                        name: "Pasquale O'Kon"
+                        path: 'http://jenkins.com/delectus-quas-voluptate-ut-atque-explicabo-odit'
+                        storage_path: 'http://www.monahan.com/voluptas-expedita-aut-consequuntur-aut'
+                        parent_id: null
+                        lft: 1
+                        rgt: 2
                         depth: 0
                         is_folder: false
-                        mime: application/xaml+xml
-                        size: 523127
-                        owner: 'Hillary Blanda'
-                        uploaded_on_cloud: true
+                        mime: application/vnd.xfdl
+                        size: 50087
+                        owner: 'Mary Johnson'
+                        uploaded_on_cloud: false
                         created_by:
-                          id: 24
-                          name: 'Hillary Blanda'
-                          email: bernice.dietrich@example.com
+                          id: 10
+                          name: 'Mary Johnson'
+                          email: cody.schulist@example.org
                           created_at:
-                            datetime: '2024-04-05T15:59:22.000000Z'
+                            datetime: '2024-04-05T20:22:31.000000Z'
                             human_diff: '1 second ago'
-                            human: 'Fri, Apr 5, 2024 3:59 PM'
+                            human: 'Fri, Apr 5, 2024 8:22 PM'
                         created_at: null
                         updated_at: null
                       -
-                        id: 18
-                        name: 'Mrs. Cassidy Cole'
-                        path: 'http://www.altenwerth.com/'
-                        storage_path: 'http://lehner.com/iusto-sint-ab-voluptas-sed-repudiandae-alias-sed.html'
+                        id: 4
+                        name: 'Chaz Hartmann'
+                        path: 'http://www.schroeder.com/'
+                        storage_path: 'https://spencer.com/et-voluptatum-similique-quos-et-velit-quis-asperiores-accusamus.html'
                         parent_id: null
                         lft: 3
                         rgt: 4
                         depth: 0
-                        is_folder: false
-                        mime: application/vnd.ms-officetheme
-                        size: 398627
-                        owner: 'Leland Feest'
-                        uploaded_on_cloud: false
+                        is_folder: true
+                        mime: video/vnd.ms-playready.media.pyv
+                        size: 118127
+                        owner: 'Grant Beatty'
+                        uploaded_on_cloud: true
                         created_by:
-                          id: 26
-                          name: 'Leland Feest'
-                          email: julian74@example.com
+                          id: 12
+                          name: 'Grant Beatty'
+                          email: balistreri.rogers@example.org
                           created_at:
-                            datetime: '2024-04-05T15:59:23.000000Z'
+                            datetime: '2024-04-05T20:22:32.000000Z'
                             human_diff: '0 seconds ago'
-                            human: 'Fri, Apr 5, 2024 3:59 PM'
+                            human: 'Fri, Apr 5, 2024 8:22 PM'
                         created_at:
-                          datetime: '2024-04-05T15:59:23.000000Z'
+                          datetime: '2024-04-05T20:22:32.000000Z'
                           human_diff: '0 seconds ago'
-                          human: 'Fri, Apr 5, 2024 3:59 PM'
+                          human: 'Fri, Apr 5, 2024 8:22 PM'
                         updated_at:
-                          datetime: '2024-04-05T15:59:23.000000Z'
+                          datetime: '2024-04-05T20:22:32.000000Z'
                           human_diff: '0 seconds ago'
-                          human: 'Fri, Apr 5, 2024 3:59 PM'
+                          human: 'Fri, Apr 5, 2024 8:22 PM'
                     items:
                       type: object
                       properties:
@@ -702,22 +702,22 @@ paths:
                           example: null
                         name:
                           type: string
-                          example: 'Bridget Harvey'
+                          example: "Pasquale O'Kon"
                         path:
                           type: string
-                          example: 'https://emard.com/sit-qui-sint-sunt-fuga-autem.html'
+                          example: 'http://jenkins.com/delectus-quas-voluptate-ut-atque-explicabo-odit'
                         storage_path:
                           type: string
-                          example: 'http://schroeder.biz/ducimus-veniam-architecto-occaecati-consequatur-necessitatibus'
+                          example: 'http://www.monahan.com/voluptas-expedita-aut-consequuntur-aut'
                         parent_id:
-                          type: integer
-                          example: 1
+                          type: string
+                          example: null
                         lft:
                           type: integer
-                          example: 2
+                          example: 1
                         rgt:
                           type: integer
-                          example: 3
+                          example: 2
                         depth:
                           type: integer
                           example: 0
@@ -726,40 +726,40 @@ paths:
                           example: false
                         mime:
                           type: string
-                          example: application/xaml+xml
+                          example: application/vnd.xfdl
                         size:
                           type: integer
-                          example: 523127
+                          example: 50087
                         owner:
                           type: string
-                          example: 'Hillary Blanda'
+                          example: 'Mary Johnson'
                         uploaded_on_cloud:
                           type: boolean
-                          example: true
+                          example: false
                         created_by:
                           type: object
                           properties:
                             id:
                               type: integer
-                              example: 24
+                              example: 10
                             name:
                               type: string
-                              example: 'Hillary Blanda'
+                              example: 'Mary Johnson'
                             email:
                               type: string
-                              example: bernice.dietrich@example.com
+                              example: cody.schulist@example.org
                             created_at:
                               type: object
                               properties:
                                 datetime:
                                   type: string
-                                  example: '2024-04-05T15:59:22.000000Z'
+                                  example: '2024-04-05T20:22:31.000000Z'
                                 human_diff:
                                   type: string
                                   example: '1 second ago'
                                 human:
                                   type: string
-                                  example: 'Fri, Apr 5, 2024 3:59 PM'
+                                  example: 'Fri, Apr 5, 2024 8:22 PM'
                         created_at:
                           type: string
                           example: null
@@ -811,6 +811,39 @@ paths:
           present:
             summary: 'When the value is present'
             value: 1
+  /api/v1/files:
+    post:
+      summary: ''
+      operationId: postApiV1Files
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Files Management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                parent_id:
+                  type: string
+                  description: 'The ID of the parent folder.'
+                  example: '1'
+                folder_name:
+                  type: string
+                  description: ''
+                  example: esse
+                files:
+                  type: array
+                  description: 'The file to upload. Must be a file.'
+                  items:
+                    type: string
+                    format: binary
+              required:
+                - parent_id
+                - files
 tags:
   -
     name: Authentication
