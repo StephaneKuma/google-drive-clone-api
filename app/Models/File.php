@@ -111,6 +111,20 @@ class File extends Node
     }
 
     /**
+     * Calculate the file size in appropriate units and return it as a formatted string.
+     *
+     * @return string
+     */
+    public function getFileSize(): string
+    {
+        $units = ['B', 'KB', 'MB', 'GB', 'TB'];
+
+        $power = $this->size > 0 ? floor(log($this->size, 1024)) : 0;
+
+        return number_format($this->size / pow(1024, $power), 2, '.', ',') . ' ' . $units[$power];
+    }
+
+    /**
      * Get the root node
      *
      * @param \Illuminate\Database\Eloquent\Builder<\App\Models\File> $query description

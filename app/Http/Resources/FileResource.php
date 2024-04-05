@@ -28,7 +28,7 @@ class FileResource extends JsonResource
             'depth' => $this->depth,
             'is_folder' => $this->is_folder,
             'mime' => $this->mime,
-            'size' => $this->size,
+            'size' => $this->getFileSize(),
             'owner' => $this->owner,
             'uploaded_on_cloud' => $this->uploaded_on_cloud,
             'created_by' => new UserResource($this->whenLoaded('creator')),
