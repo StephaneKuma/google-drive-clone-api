@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Repositories\File\Folder;
 
+use App\Actions\File\Folder\CreateFolder;
 use App\Models\File;
-use Illuminate\Support\Str;
 use App\Contracts\File\Folder\FolderContract;
 use App\Http\Requests\File\ParentIdBaseRequest;
 
@@ -29,16 +29,8 @@ class FolderRepository implements FolderContract
             $parent = File::query()->userRoot()->first();
         }
 
-        $authId = (int) auth()->id();
-
         /** @var \App\Models\File $folder */
-        $folder = $parent->children()->create([
-            'name' => $validated['name'],
-            'path' => (!$parent->isRoot() ? $parent->path . '/' : '') . Str::slug($validated['name']),
-            'is_folder' => true,
-            'created_by' => $authId,
-            'updated_by' => $authId,
-        ]);
+        $folder = app(CreateFolder::class)($parent, $validated['name']);
 
         return $folder;
     }
