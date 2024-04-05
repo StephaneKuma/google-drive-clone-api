@@ -11,16 +11,16 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ParentIdBaseRequest extends FormRequest
 {
-    protected ?File $parent = null;
+    public ?File $parent = null;
 
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        $this->parent = File::query()->where('parent_id', $this->input('parent_id'))->first();
+        $this->parent = File::query()->where('id', $this->input('parent_id'))->first();
 
-        if ($this->parent && $this->parent->isOwnedBy((int) auth()->id())) {
+        if ($this->parent && !$this->parent->isOwnedBy((int) auth()->id())) {
             return false;
         }
 
