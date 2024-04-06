@@ -52,6 +52,18 @@ class FileController extends Controller
         return FileResource::collection($files);
     }
 
+    /**
+     * Upload files
+     *
+     * Store the uploaded files and folders.
+     *
+     * @header Accept-Language en
+     *
+     * @response 200 {"message":"'Folder/File(s) uploaded successfully'"}
+     *
+     * @param \App\Http\Requests\File\StoreRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function store(StoreRequest $request): JsonResponse
     {
         return $this->service->store($request);
