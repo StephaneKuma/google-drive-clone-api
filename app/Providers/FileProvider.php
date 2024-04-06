@@ -22,6 +22,18 @@ class FileProvider extends ServiceProvider
                 new \App\Repositories\File\Folder\FolderRepository()
             )
         );
+
+        //! File
+        $this->app->bind(
+            \App\Contracts\File\FileContract::class,
+            \App\Services\File\FileService::class
+        );
+        $this->app->bind(
+            \App\Services\File\FileService::class,
+            fn () => new \App\Services\File\FileService(
+                new \App\Repositories\File\FileRepository()
+            )
+        );
     }
 
     /**

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Google Drive Clone API",
-        "_postman_id": "a54a708f-ab46-482d-9364-182b78f0a814",
+        "_postman_id": "60b4fcd6-51df-48b3-97d9-e6fe52a5e097",
         "description": "Our API provides comprehensive functionality for managing files and folders in a cloud storage environment, akin to Google Drive. Built with Laravel, it offers robust endpoints for seamless integration with your front-end applications. With secure authentication mechanisms and efficient data handling, our API enables users to upload, download, organize, and share files effortlessly. Whether you're building a personal file repository or a collaborative workspace, our API empowers you to create a powerful cloud storage solution tailored to your needs.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -56,7 +56,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":4,\"name\":\"Prof. Kiara Padberg\",\"email\":\"fherman@example.com\",\"created_at\":{\"datetime\":\"2024-04-04T16:48:06.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Thu, Apr 4, 2024 4:48 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
+                            "body": "{\"data\":{\"id\":37,\"name\":\"Charles Cremin MD\",\"email\":\"eschaefer@example.com\",\"created_at\":{\"datetime\":\"2024-04-06T01:04:34.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
                             "name": ""
                         }
                     ]
@@ -98,7 +98,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":5,\"name\":\"Jennifer Bradtke\",\"email\":\"ibergnaum@example.org\",\"created_at\":{\"datetime\":\"2024-04-04T16:48:06.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Thu, Apr 4, 2024 4:48 PM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
+                            "body": "{\"data\":{\"id\":38,\"name\":\"Eileen Orn\",\"email\":\"pouros.ayden@example.com\",\"created_at\":{\"datetime\":\"2024-04-06T01:04:35.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"}},\"token\":\"1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e\"}",
                             "name": ""
                         }
                     ]
@@ -178,7 +178,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"token\":\"quia\",\"email\":\"mona.towne@example.com\",\"password\":\"r=0}*h[|m2@GTCY5u)c\",\"password_confirmation\":\"dolore\"}"
+                                    "raw": "{\"token\":\"cupiditate\",\"email\":\"kbreitenberg@example.org\",\"password\":\",^F.y.Sl\\\\B27|Zg#@4%6\",\"password_confirmation\":\"ut\"}"
                                 },
                                 "description": "Reset the given user's password.",
                                 "auth": {
@@ -361,7 +361,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":8,\"name\":\"Reanna Gutmann\",\"email\":\"ciara.champlin@example.com\",\"created_at\":{\"datetime\":\"2024-04-04T16:48:07.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Thu, Apr 4, 2024 4:48 PM\"}}}",
+                            "body": "{\"data\":{\"id\":45,\"name\":\"Miss Drew Shields\",\"email\":\"pwhite@example.net\",\"created_at\":{\"datetime\":\"2024-04-06T01:04:38.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"}}}",
                             "name": ""
                         }
                     ]
@@ -402,7 +402,7 @@
                                 ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\"parent_id\":\"1\",\"name\":\"uomktxztfmquyjdbrpcrrozw\"}"
+                                    "raw": "{\"parent_id\":\"1\",\"name\":\"yhqvvbih\"}"
                                 },
                                 "description": "Store a newly created folder."
                             },
@@ -410,10 +410,105 @@
                                 {
                                     "header": [],
                                     "code": 200,
-                                    "body": "{\"data\":{\"id\":1,\"name\":\"Janae Schuppe PhD\",\"path\":\"http:\\\/\\\/www.fadel.biz\\\/quaerat-quasi-necessitatibus-aliquid-nihil-tempora\",\"storage_path\":\"http:\\\/\\\/www.block.com\\\/\",\"parent_id\":null,\"lft\":1,\"rgt\":2,\"depth\":0,\"is_folder\":false,\"mime\":\"image\\\/svg+xml\",\"size\":805644,\"owner\":\"Wendell Donnelly\",\"uploaded_on_cloud\":false,\"created_by\":{\"id\":6,\"name\":\"Wendell Donnelly\",\"email\":\"ellie17@example.net\",\"created_at\":{\"datetime\":\"2024-04-04T16:48:07.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Thu, Apr 4, 2024 4:48 PM\"}},\"created_at\":{\"datetime\":\"2024-04-04T16:48:07.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Thu, Apr 4, 2024 4:48 PM\"},\"updated_at\":{\"datetime\":\"2024-04-04T16:48:07.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Thu, Apr 4, 2024 4:48 PM\"}}}",
+                                    "body": "{\"data\":{\"id\":11,\"name\":\"Prof. Kaya Ankunding V\",\"path\":\"https:\\\/\\\/lebsack.com\\\/omnis-vel-ea-esse-vero-quia-veritatis.html\",\"storage_path\":\"http:\\\/\\\/hodkiewicz.org\\\/ut-eos-deleniti-et-rerum-voluptatum-nam\",\"parent_id\":null,\"lft\":1,\"rgt\":2,\"depth\":0,\"is_folder\":false,\"mime\":\"image\\\/vnd.xiff\",\"size\":\"488.13 KB\",\"owner\":\"Jannie Veum\",\"uploaded_on_cloud\":false,\"created_by\":{\"id\":39,\"name\":\"Jannie Veum\",\"email\":\"furman.muller@example.com\",\"created_at\":{\"datetime\":\"2024-04-06T01:04:35.000000Z\",\"human_diff\":\"1 second ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"}},\"created_at\":{\"datetime\":\"2024-04-06T01:04:36.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"},\"updated_at\":{\"datetime\":\"2024-04-06T01:04:36.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"}}}",
                                     "name": ""
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "name": "User files",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/files\/:folder",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/files\/:folder",
+                            "variable": [
+                                {
+                                    "id": "folder",
+                                    "key": "folder",
+                                    "value": "documents",
+                                    "description": "The path of the folder."
+                                },
+                                {
+                                    "id": "perPage",
+                                    "key": "perPage",
+                                    "value": "15",
+                                    "description": "The number of files per page."
+                                },
+                                {
+                                    "id": "page",
+                                    "key": "page",
+                                    "value": "1",
+                                    "description": "The page number."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept-Language",
+                                "value": "en"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Get the current user files."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[{\"id\":12,\"name\":\"Prof. Sebastian Pagac Sr.\",\"path\":\"http:\\\/\\\/www.langosh.com\\\/eos-labore-soluta-eveniet-a-est-ea-perspiciatis\",\"storage_path\":\"http:\\\/\\\/bernier.com\\\/dolorem-dignissimos-placeat-aut-enim-officia-architecto\",\"parent_id\":null,\"lft\":1,\"rgt\":2,\"depth\":0,\"is_folder\":false,\"mime\":\"audio\\\/x-aiff\",\"size\":\"610.19 KB\",\"owner\":\"Dr. Beaulah Macejkovic III\",\"uploaded_on_cloud\":false,\"created_by\":{\"id\":41,\"name\":\"Dr. Beaulah Macejkovic III\",\"email\":\"monserrate.will@example.net\",\"created_at\":{\"datetime\":\"2024-04-06T01:04:36.000000Z\",\"human_diff\":\"1 second ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"}},\"created_at\":{\"datetime\":\"2024-04-06T01:04:36.000000Z\",\"human_diff\":\"1 second ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"},\"updated_at\":{\"datetime\":\"2024-04-06T01:04:36.000000Z\",\"human_diff\":\"1 second ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"}},{\"id\":13,\"name\":\"Cassidy Bartell\",\"path\":\"http:\\\/\\\/kshlerin.com\\\/consequuntur-laboriosam-vel-doloremque-consectetur\",\"storage_path\":\"http:\\\/\\\/boehm.info\\\/ut-quis-aut-et-necessitatibus-similique.html\",\"parent_id\":null,\"lft\":3,\"rgt\":4,\"depth\":0,\"is_folder\":false,\"mime\":\"text\\\/vnd.curl.scurl\",\"size\":\"825.85 KB\",\"owner\":\"Evert Walsh\",\"uploaded_on_cloud\":false,\"created_by\":{\"id\":43,\"name\":\"Evert Walsh\",\"email\":\"glen90@example.com\",\"created_at\":{\"datetime\":\"2024-04-06T01:04:37.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"}},\"created_at\":{\"datetime\":\"2024-04-06T01:04:37.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"},\"updated_at\":{\"datetime\":\"2024-04-06T01:04:37.000000Z\",\"human_diff\":\"0 seconds ago\",\"human\":\"Sat, Apr 6, 2024 1:04 AM\"}}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Upload files",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/files",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/files"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept-Language",
+                                "value": "en"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"parent_id\":\"1\",\"folder_name\":\"quas\",\"files\":[\"image.png\"]}"
+                        },
+                        "description": "Store the uploaded files and folders."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"'Folder\/File(s) uploaded successfully'\"}",
+                            "name": ""
                         }
                     ]
                 }

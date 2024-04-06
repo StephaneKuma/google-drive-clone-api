@@ -125,6 +125,12 @@
                                             <a href="#files-management-POSTapi-v1-folders">Create folder</a>
                                         </li>
                                                                     </ul>
+                                                                                <li class="tocify-item level-2" data-unique="files-management-GETapi-v1-files--folder--">
+                                <a href="#files-management-GETapi-v1-files--folder--">User files</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="files-management-POSTapi-v1-files">
+                                <a href="#files-management-POSTapi-v1-files">Upload files</a>
+                            </li>
                                                                         </ul>
                             </ul>
             </div>
@@ -136,7 +142,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: April 4, 2024</li>
+        <li>Last updated: April 6, 2024</li>
     </ul>
 </div>
 
@@ -221,13 +227,13 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 4,
-        &quot;name&quot;: &quot;Prof. Kiara Padberg&quot;,
-        &quot;email&quot;: &quot;fherman@example.com&quot;,
+        &quot;id&quot;: 37,
+        &quot;name&quot;: &quot;Charles Cremin MD&quot;,
+        &quot;email&quot;: &quot;eschaefer@example.com&quot;,
         &quot;created_at&quot;: {
-            &quot;datetime&quot;: &quot;2024-04-04T16:48:06.000000Z&quot;,
+            &quot;datetime&quot;: &quot;2024-04-06T01:04:34.000000Z&quot;,
             &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
-            &quot;human&quot;: &quot;Thu, Apr 4, 2024 4:48 PM&quot;
+            &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
         }
     },
     &quot;token&quot;: &quot;1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e&quot;
@@ -417,13 +423,13 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 5,
-        &quot;name&quot;: &quot;Jennifer Bradtke&quot;,
-        &quot;email&quot;: &quot;ibergnaum@example.org&quot;,
+        &quot;id&quot;: 38,
+        &quot;name&quot;: &quot;Eileen Orn&quot;,
+        &quot;email&quot;: &quot;pouros.ayden@example.com&quot;,
         &quot;created_at&quot;: {
-            &quot;datetime&quot;: &quot;2024-04-04T16:48:06.000000Z&quot;,
+            &quot;datetime&quot;: &quot;2024-04-06T01:04:35.000000Z&quot;,
             &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
-            &quot;human&quot;: &quot;Thu, Apr 4, 2024 4:48 PM&quot;
+            &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
         }
     },
     &quot;token&quot;: &quot;1|Ue8Wpv3izBua27OmZAAmk8eofN7XS7iQSzyiLW7c1f96270e&quot;
@@ -724,13 +730,13 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 8,
-        &quot;name&quot;: &quot;Reanna Gutmann&quot;,
-        &quot;email&quot;: &quot;ciara.champlin@example.com&quot;,
+        &quot;id&quot;: 45,
+        &quot;name&quot;: &quot;Miss Drew Shields&quot;,
+        &quot;email&quot;: &quot;pwhite@example.net&quot;,
         &quot;created_at&quot;: {
-            &quot;datetime&quot;: &quot;2024-04-04T16:48:07.000000Z&quot;,
+            &quot;datetime&quot;: &quot;2024-04-06T01:04:38.000000Z&quot;,
             &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
-            &quot;human&quot;: &quot;Thu, Apr 4, 2024 4:48 PM&quot;
+            &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
         }
     }
 }</code>
@@ -1020,10 +1026,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"token\": \"quia\",
-    \"email\": \"mona.towne@example.com\",
-    \"password\": \"r=0}*h[|m2@GTCY5u)c\",
-    \"password_confirmation\": \"dolore\"
+    \"token\": \"cupiditate\",
+    \"email\": \"kbreitenberg@example.org\",
+    \"password\": \",^F.y.Sl\\\\B27|Zg#@4%6\",
+    \"password_confirmation\": \"ut\"
 }"
 </code></pre></div>
 
@@ -1040,10 +1046,10 @@ const headers = {
 };
 
 let body = {
-    "token": "quia",
-    "email": "mona.towne@example.com",
-    "password": "r=0}*h[|m2@GTCY5u)c",
-    "password_confirmation": "dolore"
+    "token": "cupiditate",
+    "email": "kbreitenberg@example.org",
+    "password": ",^F.y.Sl\\B27|Zg#@4%6",
+    "password_confirmation": "ut"
 };
 
 fetch(url, {
@@ -1152,10 +1158,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="token"                data-endpoint="POSTapi-v1-password-reset"
-               value="quia"
+               value="cupiditate"
                data-component="body">
     <br>
-<p>The reset password token. Example: <code>quia</code></p>
+<p>The reset password token. Example: <code>cupiditate</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -1163,10 +1169,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-v1-password-reset"
-               value="mona.towne@example.com"
+               value="kbreitenberg@example.org"
                data-component="body">
     <br>
-<p>The email address. Must be a valid email address. Example: <code>mona.towne@example.com</code></p>
+<p>The email address. Must be a valid email address. Example: <code>kbreitenberg@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -1174,10 +1180,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-v1-password-reset"
-               value="r=0}*h[|m2@GTCY5u)c"
+               value=",^F.y.Sl\B27|Zg#@4%6"
                data-component="body">
     <br>
-<p>The new password. Example: <code>r=0}*h[|m2@GTCY5u)c</code></p>
+<p>The new password. Example: <code>,^F.y.Sl\B27|Zg#@4%6</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password_confirmation</code></b>&nbsp;&nbsp;
@@ -1185,10 +1191,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password_confirmation"                data-endpoint="POSTapi-v1-password-reset"
-               value="dolore"
+               value="ut"
                data-component="body">
     <br>
-<p>The password confirmation. Example: <code>dolore</code></p>
+<p>The password confirmation. Example: <code>ut</code></p>
         </div>
         </form>
 
@@ -1508,7 +1514,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"parent_id\": \"1\",
-    \"name\": \"uomktxztfmquyjdbrpcrrozw\"
+    \"name\": \"yhqvvbih\"
 }"
 </code></pre></div>
 
@@ -1527,7 +1533,7 @@ const headers = {
 
 let body = {
     "parent_id": "1",
-    "name": "uomktxztfmquyjdbrpcrrozw"
+    "name": "yhqvvbih"
 };
 
 fetch(url, {
@@ -1546,38 +1552,38 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;Janae Schuppe PhD&quot;,
-        &quot;path&quot;: &quot;http://www.fadel.biz/quaerat-quasi-necessitatibus-aliquid-nihil-tempora&quot;,
-        &quot;storage_path&quot;: &quot;http://www.block.com/&quot;,
+        &quot;id&quot;: 11,
+        &quot;name&quot;: &quot;Prof. Kaya Ankunding V&quot;,
+        &quot;path&quot;: &quot;https://lebsack.com/omnis-vel-ea-esse-vero-quia-veritatis.html&quot;,
+        &quot;storage_path&quot;: &quot;http://hodkiewicz.org/ut-eos-deleniti-et-rerum-voluptatum-nam&quot;,
         &quot;parent_id&quot;: null,
         &quot;lft&quot;: 1,
         &quot;rgt&quot;: 2,
         &quot;depth&quot;: 0,
         &quot;is_folder&quot;: false,
-        &quot;mime&quot;: &quot;image/svg+xml&quot;,
-        &quot;size&quot;: 805644,
-        &quot;owner&quot;: &quot;Wendell Donnelly&quot;,
+        &quot;mime&quot;: &quot;image/vnd.xiff&quot;,
+        &quot;size&quot;: &quot;488.13 KB&quot;,
+        &quot;owner&quot;: &quot;Jannie Veum&quot;,
         &quot;uploaded_on_cloud&quot;: false,
         &quot;created_by&quot;: {
-            &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Wendell Donnelly&quot;,
-            &quot;email&quot;: &quot;ellie17@example.net&quot;,
+            &quot;id&quot;: 39,
+            &quot;name&quot;: &quot;Jannie Veum&quot;,
+            &quot;email&quot;: &quot;furman.muller@example.com&quot;,
             &quot;created_at&quot;: {
-                &quot;datetime&quot;: &quot;2024-04-04T16:48:07.000000Z&quot;,
-                &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
-                &quot;human&quot;: &quot;Thu, Apr 4, 2024 4:48 PM&quot;
+                &quot;datetime&quot;: &quot;2024-04-06T01:04:35.000000Z&quot;,
+                &quot;human_diff&quot;: &quot;1 second ago&quot;,
+                &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
             }
         },
         &quot;created_at&quot;: {
-            &quot;datetime&quot;: &quot;2024-04-04T16:48:07.000000Z&quot;,
+            &quot;datetime&quot;: &quot;2024-04-06T01:04:36.000000Z&quot;,
             &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
-            &quot;human&quot;: &quot;Thu, Apr 4, 2024 4:48 PM&quot;
+            &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
         },
         &quot;updated_at&quot;: {
-            &quot;datetime&quot;: &quot;2024-04-04T16:48:07.000000Z&quot;,
+            &quot;datetime&quot;: &quot;2024-04-06T01:04:36.000000Z&quot;,
             &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
-            &quot;human&quot;: &quot;Thu, Apr 4, 2024 4:48 PM&quot;
+            &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
         }
     }
 }</code>
@@ -1692,10 +1698,456 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-v1-folders"
-               value="uomktxztfmquyjdbrpcrrozw"
+               value="yhqvvbih"
                data-component="body">
     <br>
-<p>The name of the folder. Must not be greater than 1024 characters. Example: <code>uomktxztfmquyjdbrpcrrozw</code></p>
+<p>The name of the folder. Must not be greater than 1024 characters. Example: <code>yhqvvbih</code></p>
+        </div>
+        </form>
+
+                                        <h2 id="files-management-GETapi-v1-files--folder--">User files</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>Get the current user files.</p>
+
+<span id="example-requests-GETapi-v1-files--folder--">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://google-drive-clone-api.wip/api/v1/files/documents" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Accept-Language: en" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://google-drive-clone-api.wip/api/v1/files/documents"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Accept-Language": "en",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-files--folder--">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 12,
+            &quot;name&quot;: &quot;Prof. Sebastian Pagac Sr.&quot;,
+            &quot;path&quot;: &quot;http://www.langosh.com/eos-labore-soluta-eveniet-a-est-ea-perspiciatis&quot;,
+            &quot;storage_path&quot;: &quot;http://bernier.com/dolorem-dignissimos-placeat-aut-enim-officia-architecto&quot;,
+            &quot;parent_id&quot;: null,
+            &quot;lft&quot;: 1,
+            &quot;rgt&quot;: 2,
+            &quot;depth&quot;: 0,
+            &quot;is_folder&quot;: false,
+            &quot;mime&quot;: &quot;audio/x-aiff&quot;,
+            &quot;size&quot;: &quot;610.19 KB&quot;,
+            &quot;owner&quot;: &quot;Dr. Beaulah Macejkovic III&quot;,
+            &quot;uploaded_on_cloud&quot;: false,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 41,
+                &quot;name&quot;: &quot;Dr. Beaulah Macejkovic III&quot;,
+                &quot;email&quot;: &quot;monserrate.will@example.net&quot;,
+                &quot;created_at&quot;: {
+                    &quot;datetime&quot;: &quot;2024-04-06T01:04:36.000000Z&quot;,
+                    &quot;human_diff&quot;: &quot;1 second ago&quot;,
+                    &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
+                }
+            },
+            &quot;created_at&quot;: {
+                &quot;datetime&quot;: &quot;2024-04-06T01:04:36.000000Z&quot;,
+                &quot;human_diff&quot;: &quot;1 second ago&quot;,
+                &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
+            },
+            &quot;updated_at&quot;: {
+                &quot;datetime&quot;: &quot;2024-04-06T01:04:36.000000Z&quot;,
+                &quot;human_diff&quot;: &quot;1 second ago&quot;,
+                &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;name&quot;: &quot;Cassidy Bartell&quot;,
+            &quot;path&quot;: &quot;http://kshlerin.com/consequuntur-laboriosam-vel-doloremque-consectetur&quot;,
+            &quot;storage_path&quot;: &quot;http://boehm.info/ut-quis-aut-et-necessitatibus-similique.html&quot;,
+            &quot;parent_id&quot;: null,
+            &quot;lft&quot;: 3,
+            &quot;rgt&quot;: 4,
+            &quot;depth&quot;: 0,
+            &quot;is_folder&quot;: false,
+            &quot;mime&quot;: &quot;text/vnd.curl.scurl&quot;,
+            &quot;size&quot;: &quot;825.85 KB&quot;,
+            &quot;owner&quot;: &quot;Evert Walsh&quot;,
+            &quot;uploaded_on_cloud&quot;: false,
+            &quot;created_by&quot;: {
+                &quot;id&quot;: 43,
+                &quot;name&quot;: &quot;Evert Walsh&quot;,
+                &quot;email&quot;: &quot;glen90@example.com&quot;,
+                &quot;created_at&quot;: {
+                    &quot;datetime&quot;: &quot;2024-04-06T01:04:37.000000Z&quot;,
+                    &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
+                    &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
+                }
+            },
+            &quot;created_at&quot;: {
+                &quot;datetime&quot;: &quot;2024-04-06T01:04:37.000000Z&quot;,
+                &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
+                &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
+            },
+            &quot;updated_at&quot;: {
+                &quot;datetime&quot;: &quot;2024-04-06T01:04:37.000000Z&quot;,
+                &quot;human_diff&quot;: &quot;0 seconds ago&quot;,
+                &quot;human&quot;: &quot;Sat, Apr 6, 2024 1:04 AM&quot;
+            }
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-files--folder--" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-files--folder--"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-files--folder--"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-files--folder--" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-files--folder--">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-files--folder--" data-method="GET"
+      data-path="api/v1/files/{folder?}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-files--folder--', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-files--folder--"
+                    onclick="tryItOut('GETapi-v1-files--folder--');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-files--folder--"
+                    onclick="cancelTryOut('GETapi-v1-files--folder--');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-files--folder--"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/files/{folder?}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-files--folder--"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept-Language</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept-Language"                data-endpoint="GETapi-v1-files--folder--"
+               value="en"
+               data-component="header">
+    <br>
+<p>Example: <code>en</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-files--folder--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-files--folder--"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>folder</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="folder"                data-endpoint="GETapi-v1-files--folder--"
+               value="documents"
+               data-component="url">
+    <br>
+<p>The path of the folder. Example: <code>documents</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>perPage</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="perPage"                data-endpoint="GETapi-v1-files--folder--"
+               value="15"
+               data-component="url">
+    <br>
+<p>The number of files per page. Example: <code>15</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-v1-files--folder--"
+               value="1"
+               data-component="url">
+    <br>
+<p>The page number. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="files-management-POSTapi-v1-files">Upload files</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>Store the uploaded files and folders.</p>
+
+<span id="example-requests-POSTapi-v1-files">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://google-drive-clone-api.wip/api/v1/files" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Accept-Language: en" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"parent_id\": \"1\",
+    \"folder_name\": \"quas\",
+    \"files\": [
+        \"image.png\"
+    ]
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://google-drive-clone-api.wip/api/v1/files"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Accept-Language": "en",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "parent_id": "1",
+    "folder_name": "quas",
+    "files": [
+        "image.png"
+    ]
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-files">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;&#039;Folder/File(s) uploaded successfully&#039;&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-files" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-files"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-files"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-files" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-files">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-v1-files" data-method="POST"
+      data-path="api/v1/files"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-files', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-files"
+                    onclick="tryItOut('POSTapi-v1-files');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-files"
+                    onclick="cancelTryOut('POSTapi-v1-files');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-files"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/files</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-files"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept-Language</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept-Language"                data-endpoint="POSTapi-v1-files"
+               value="en"
+               data-component="header">
+    <br>
+<p>Example: <code>en</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-v1-files"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-v1-files"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>parent_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="parent_id"                data-endpoint="POSTapi-v1-files"
+               value="1"
+               data-component="body">
+    <br>
+<p>The ID of the parent folder. Example: <code>1</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>folder_name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="folder_name"                data-endpoint="POSTapi-v1-files"
+               value="quas"
+               data-component="body">
+    <br>
+<p>Example: <code>quas</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>files</code></b>&nbsp;&nbsp;
+<small>file[]</small>&nbsp;
+ &nbsp;
+                <input type="file" style="display: none"
+                              name="files[0]"                data-endpoint="POSTapi-v1-files"
+               data-component="body">
+        <input type="file" style="display: none"
+               name="files[1]"                data-endpoint="POSTapi-v1-files"
+               data-component="body">
+    <br>
+<p>The file to upload. Must be a file.</p>
         </div>
         </form>
 
